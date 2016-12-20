@@ -28,12 +28,11 @@
 (load custom-file 'noerror)
 
 (require 'init-elpa)
+(require 'init-evil)
 
-(require-package 'evil)
 (require-package 'jbeans-theme)
+(load-theme 'jbeans t)
+
 (require-package 'magit)
 
-(load-theme 'jbeans t)
-(require 'evil)
-(evil-mode 1)
 (setq default-directory "~/" )
