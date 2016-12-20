@@ -7,18 +7,16 @@
 
 (add-hook 'emacs-startup-hook 'toggle-frame-maximized)
 
-;; Hide splash-screen and startup-message
+;; Housekeeping
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
 
-(defun toggle-bars ()
-  "Toggles bars visibility."
-  (interactive)
-  (menu-bar-mode -1)
-  (tool-bar-mode -1)
-  (scroll-bar-mode -1))
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 
-(toggle-bars)
+(show-paren-mode 1) ; Matching parenthesis
+
 
 ;; Load all lisp files
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -29,6 +27,7 @@
 
 (require 'init-elpa)
 (require 'init-evil)
+(require 'init-helm)
 
 (require-package 'jbeans-theme)
 (load-theme 'jbeans t)
