@@ -1,4 +1,3 @@
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -17,13 +16,14 @@
 
 (show-paren-mode 1) ; Matching parenthesis
 
-
 ;; Load all lisp files
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 ; Prevent blob at bottom of init.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
+
+(defmacro after (feature &rest body))
 
 (require 'init-elpa)
 (require 'init-evil)
@@ -33,5 +33,20 @@
 (load-theme 'jbeans t)
 
 (require-package 'magit)
+
+(if (display-graphic-p)
+    (progn
+      (require-package 'git-gutter-fringe+)
+      (require 'git-gutter-fringe+))
+  (require-package 'git-gutter+))
+
+(global-git-gutter+-mode)
+
+(add-hook 'prog-mode-hook 'linum-mode)
+
+(require-package 'spaceline)
+(require 'spaceline-config)
+(setq spaceline-highlight-face-func #'spaceline-highlight-face-evil-state) ; Different highlighting for modes
+(spaceline-spacemacs-theme)
 
 (setq default-directory "~/" )

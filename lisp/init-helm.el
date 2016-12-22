@@ -12,4 +12,9 @@
 (require-package 'helm-ag)
 (setq helm-ag-fuzzy-match t)
 
+(require-package 'helm-projectile)
+
+(define-key evil-normal-state-map (kbd "-") 'helm-find-files)
+(define-key evil-normal-state-map (kbd "C-p") 'helm-projectile)
+
 (provide 'init-helm)
