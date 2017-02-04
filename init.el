@@ -32,6 +32,12 @@
 (require-package 'jbeans-theme)
 (load-theme 'jbeans t)
 
+
+(require-package 'company)
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+(setq company-idle-delay 0)
+
 (require-package 'magit)
 
 (if (display-graphic-p)
