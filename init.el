@@ -55,8 +55,6 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-idle-delay 0)
 
-(require-package 'magit)
-
 (if (display-graphic-p)
     (progn
       (require-package 'git-gutter-fringe+)

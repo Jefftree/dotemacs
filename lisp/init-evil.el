@@ -15,10 +15,14 @@
 (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
 
+(require-package 'magit)
+
 (require-package 'key-chord)
 (key-chord-mode 1)
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+
+(define-key evil-normal-state-map (kbd "C-c gs") 'magit-status)
 
 (setq evil-emacs-state-cursor '("cyan" box))
 (setq evil-normal-state-cursor '("green" box))
