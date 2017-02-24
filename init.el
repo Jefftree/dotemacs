@@ -16,6 +16,8 @@
 
 (show-paren-mode 1) ; Matching parenthesis
 
+(setq js-indent-level 2) ; Javscript indentation: 2
+
 ;; Load all lisp files
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
@@ -32,6 +34,21 @@
 (require-package 'jbeans-theme)
 (load-theme 'jbeans t)
 
+; Display/Color Scheme Modifications
+(blink-cursor-mode 0) ; no blink
+
+(global-hl-line-mode)
+
+(set-face-background 'hl-line "darkblue")
+
+(require-package 'markdown-mode)
+(setq markdown-command "multimarkdown")
+(setq markdown-enable-math 1)
+
+(require-package 'which-key)
+(which-key-mode)
+
+(setq scroll-margin 15)
 
 (require-package 'company)
 (require 'company)

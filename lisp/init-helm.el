@@ -18,8 +18,9 @@
 
 (setq projectile-use-git-grep 1)
 
+(projectile-mode)
+
 (define-key evil-normal-state-map (kbd "-") 'helm-find-files)
-(define-key evil-normal-state-map (kbd "C-p") 'helm-projectile)
 
 (define-key evil-normal-state-map (kbd "SPC SPC") 'helm-M-x)
 
