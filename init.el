@@ -37,6 +37,13 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
+(defun add-ssh-agent-to-tramp ()
+  (cl-pushnew '("-A")
+              (cadr (assoc 'tramp-login-args
+                           (assoc "ssh" tramp-methods)))
+              :test #'equal))
+(add-ssh-agent-to-tramp)
+
 (require-package 'markdown-mode)
 (setq markdown-command "multimarkdown")
 (setq markdown-enable-math 1)
