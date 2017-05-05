@@ -30,30 +30,27 @@
 (require 'init-elpa)
 (require 'init-evil)
 (require 'init-helm)
+(require 'init-company)
+(require 'init-theme)
 
-(require-package 'jbeans-theme)
-(load-theme 'jbeans t)
-
-; Display/Color Scheme Modifications
-(blink-cursor-mode 0) ; no blink
-
-(global-hl-line-mode)
-
-(set-face-background 'hl-line "darkblue")
+(require-package 'exec-path-from-shell)
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 (require-package 'markdown-mode)
 (setq markdown-command "multimarkdown")
 (setq markdown-enable-math 1)
 
+(require-package 'flycheck)
+(global-flycheck-mode)
+
+(setq backup-directory-alist `(("." . "~/.emacs.d/saves")))
+(setq backup-by-copying t)
+
 (require-package 'which-key)
 (which-key-mode)
 
 (setq scroll-margin 15)
-
-(require-package 'company)
-(require 'company)
-(add-hook 'after-init-hook 'global-company-mode)
-(setq company-idle-delay 0)
 
 (if (display-graphic-p)
     (progn
@@ -62,12 +59,5 @@
   (require-package 'git-gutter+))
 
 (global-git-gutter+-mode)
-
-(add-hook 'prog-mode-hook 'linum-mode)
-
-(require-package 'spaceline)
-(require 'spaceline-config)
-(setq spaceline-highlight-face-func #'spaceline-highlight-face-evil-state) ; Different highlighting for modes
-(spaceline-spacemacs-theme)
 
 (setq default-directory "~/" )
