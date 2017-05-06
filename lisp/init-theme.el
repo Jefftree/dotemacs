@@ -15,5 +15,6 @@
 (require 'spaceline-config)
 (setq spaceline-highlight-face-func #'spaceline-highlight-face-evil-state) ; Different highlighting for modes
 (spaceline-spacemacs-theme)
+(spaceline-helm-mode)
 
 (provide 'init-theme)

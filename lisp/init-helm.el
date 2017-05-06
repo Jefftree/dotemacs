@@ -2,8 +2,9 @@
 (require 'helm-config)
 (helm-mode 1)
 
+(setq helm-autoresize-min-height 15)
+(setq helm-autoresize-max-height 30)
 (helm-autoresize-mode t)
-(setq helm-autoresize-min-height 20)
 
 (setq helm-buffer-max-length 40)
 
@@ -30,12 +31,10 @@
 (define-key evil-normal-state-map (kbd "-") 'helm-find-files)
 
 (define-key evil-normal-state-map (kbd "SPC SPC") 'helm-M-x)
-(define-key evil-normal-state-map (kbd "SPC f") 'helm-find-files)
-(define-key evil-normal-state-map (kbd "SPC p f") 'helm-projectile-find-file)
-(define-key evil-normal-state-map (kbd "SPC b") 'helm-buffers-list)
+(define-key evil-normal-state-map (kbd "SPC f") 'helm-projectile-find-file)
+(define-key evil-normal-state-map (kbd "SPC r") 'helm-mini)
 (define-key evil-normal-state-map (kbd "SPC y") 'helm-show-kill-ring)
 (define-key evil-normal-state-map (kbd "SPC e") 'eval-buffer)
-(define-key evil-normal-state-map (kbd "SPC p p") 'helm-projectile-switch-project)
-(define-key evil-normal-state-map (kbd "SPC r") 'helm-recentf)
+(define-key evil-normal-state-map (kbd "SPC p") 'helm-projectile-switch-project)
 
 (provide 'init-helm)
