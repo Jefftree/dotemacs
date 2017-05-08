@@ -26,5 +26,6 @@
 (require 'init-flycheck)
 (require 'init-util)
 (require 'init-misc)
+(require 'init-bindings)
 
 (setq default-directory "~/" )

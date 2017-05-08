@@ -36,5 +36,6 @@
 (define-key evil-normal-state-map (kbd "SPC y") 'helm-show-kill-ring)
 (define-key evil-normal-state-map (kbd "SPC e") 'eval-buffer)
 (define-key evil-normal-state-map (kbd "SPC p") 'helm-projectile-switch-project)
+(define-key evil-normal-state-map (kbd "SPC s") 'helm-projectile-ag)
 
 (provide 'init-helm)

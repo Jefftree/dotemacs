@@ -21,9 +21,6 @@
               :test #'equal))
 (add-ssh-agent-to-tramp)
 
-(require-package 'which-key)
-(which-key-mode)
-
 (if (display-graphic-p)
     (progn
       (require-package 'git-gutter-fringe+)
