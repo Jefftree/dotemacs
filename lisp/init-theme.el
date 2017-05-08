@@ -6,7 +6,9 @@
 (blink-cursor-mode 0) ; no blink
 
 (global-hl-line-mode)
-(global-linum-mode t)
+
+(require-package 'nlinum)
+(global-nlinum-mode t)
 
 (set-face-background 'hl-line "darkblue")
 (set-face-foreground 'linum "grey98")
