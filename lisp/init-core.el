@@ -2,6 +2,9 @@
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
 
+(setq-default indent-tabs-mode nil)
+(setq tab-width 4)
+
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (unless (display-graphic-p) (menu-bar-mode -1))

@@ -24,8 +24,8 @@
 (require 'init-company)
 (require 'init-theme)
 (require 'init-flycheck)
-(require 'init-util)
 (require 'init-misc)
 (require 'init-bindings)
+(require 'init-util)
 
 (setq default-directory "~/" )

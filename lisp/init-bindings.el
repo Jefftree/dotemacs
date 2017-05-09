@@ -20,35 +20,33 @@
                                (desc ,(caddr binding)))
                            (-define-key ,keymap seq func desc)))))
 
-(after 'evil
-       (require-package 'key-chord)
-       (key-chord-mode 1)
-       (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
-       (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+(require-package 'key-chord)
+(key-chord-mode 1)
+(key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 
-       (-define-keys evil-normal-state-map
-         (", w" 'save-buffer)
-         (", v" (kbd "C-w v C-w l") "vsplit")
-         (", s" (kbd "C-w s C-w j") "ssplit")
+(-define-keys evil-normal-state-map
+    (", w" 'save-buffer)
+    (", v" (kbd "C-w v C-w l") "vsplit")
+    (", s" (kbd "C-w s C-w j") "ssplit")
 
-        ;("C-h" 'evil-window-left)
-         ("C-j" 'evil-window-down)
-         ("C-k" 'evil-window-up)
-         ("C-l" 'evil-window-right)
+;("C-h" 'evil-window-left)
+    ("C-j" 'evil-window-down)
+    ("C-k" 'evil-window-up)
+    ("C-l" 'evil-window-right)
 
-         ("j" 'evil-next-visual-line)
-         ("k" 'evil-previous-visual-line)
-         ("g p" "`[v`]" "evil-goto-paste")
+    ("j" 'evil-next-visual-line)
+    ("k" 'evil-previous-visual-line)
+    ("g p" "`[v`]" "evil-goto-paste")
 
-         ("[ e" "ddkP")
-         ("] e" "ddp")
-         ("[ b" 'previous-buffer)
-         ("] b" 'next-buffer)
-         ("[ q" 'previous-error)
-         ("] q" 'next-error)
-         )
+    ("[ e" "ddkP")
+    ("] e" "ddp")
+    ("[ b" 'previous-buffer)
+    ("] b" 'next-buffer)
+    ("[ q" 'previous-error)
+    ("] q" 'next-error)
 )
 
-
+(-define-key evil-normal-state-map (kbd "SPC t") 'neotree-toggle)
 
 (provide 'init-bindings)
