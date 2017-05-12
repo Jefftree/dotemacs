@@ -8,6 +8,8 @@
 
 (setq helm-buffer-max-length 40)
 
+(setq helm-ff-tramp-not-fancy nil)
+
 (require-package 'helm-flx)
 (helm-flx-mode t)
 
