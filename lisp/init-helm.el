@@ -25,6 +25,9 @@
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
 
+(setq projectile-cache-file (concat dotemacs-cache-directory "projectile.cache"))
+(setq projectile-known-projects-file (concat dotemacs-cache-directory "projectile-bookmarks.eld"))
+
 (setq projectile-use-git-grep 1)
 (setq projectile-enable-caching t)
 (setq projectile-file-exists-remote-cache nil)
