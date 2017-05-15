@@ -29,11 +29,7 @@
     (", w" 'save-buffer)
     (", v" (kbd "C-w v C-w l") "vsplit")
     (", s" (kbd "C-w s C-w j") "ssplit")
-
-;("C-h" 'evil-window-left)
-    ("C-j" 'evil-window-down)
-    ("C-k" 'evil-window-up)
-    ("C-l" 'evil-window-right)
+    (", g" 'magit-status)
 
     ("j" 'evil-next-visual-line)
     ("k" 'evil-previous-visual-line)
@@ -45,6 +41,14 @@
     ("] b" 'next-buffer)
     ("[ q" 'previous-error)
     ("] q" 'next-error)
+)
+
+(-define-keys evil-motion-state-map
+  ("M-h" 'evil-window-left)
+  ("M-j" 'evil-window-down)
+  ("M-k" 'evil-window-up)
+  ("M-l" 'evil-window-right)
+  ("M-o" 'evil-window-rotate-downwards)
 )
 
 (-define-key evil-normal-state-map (kbd "SPC t") 'neotree-toggle)
