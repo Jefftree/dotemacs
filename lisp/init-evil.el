@@ -4,6 +4,7 @@
 
 (require-package 'magit)
 (require-package 'evil-magit)
+(require 'evil-magit)
 (define-key evil-normal-state-map (kbd "C-c gs") 'magit-status)
 
 (setq evil-emacs-state-cursor '("cyan" box))
