@@ -25,6 +25,11 @@
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 
+(-define-keys magit-blame-mode-map
+  ("<tab>" 'magit-show-commit)
+  ("n" 'evil-search-next)
+)
+
 (-define-keys evil-normal-state-map
     (", w" 'save-buffer)
     (", v" (kbd "C-w v C-w l") "vsplit")
