@@ -57,6 +57,18 @@
   ("M-o" 'evil-window-rotate-downwards)
 )
 
+(-define-keys evil-normal-state-map
+  ("-" 'helm-find-files)
+  ("SPC f" 'helm-projectile-find-file)
+  ("SPC r" 'helm-mini)
+  ("SPC y" 'helm-show-kill-ring)
+  ("SPC e" 'eval-buffer)
+  ("SPC p" 'helm-projectile-switch-project)
+  ("SPC s" 'helm-projectile-ag)
+  ("SPC v" 'helm-resume)
+  ("SPC SPC" 'helm-M-x)
+)
+
 (-define-key evil-normal-state-map (kbd "SPC t") 'neotree-toggle)
 
 (provide 'init-bindings)

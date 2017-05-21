@@ -42,5 +42,7 @@
 (diminish 'which-key-mode)
 (diminish 'git-gutter+-mode)
 (diminish 'color-identifiers-mode)
+(diminish 'auto-revert-mode)
+(diminish 'evil-commentary-mode)
 
 (provide 'init-util)

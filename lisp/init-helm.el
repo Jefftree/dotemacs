@@ -21,26 +21,20 @@
 
 (setq helm-M-x-fuzzy-match t)
 
+; Use same buffer for split
+(setq helm-split-window-in-side-p t)
+
 (require-package 'helm-projectile)
-(setq projectile-completion-system 'helm)
-(helm-projectile-on)
 
 (setq projectile-cache-file (concat dotemacs-cache-directory "projectile.cache"))
 (setq projectile-known-projects-file (concat dotemacs-cache-directory "projectile-bookmarks.eld"))
+
+(setq projectile-completion-system 'helm)
+(helm-projectile-on)
 
 (setq projectile-use-git-grep 1)
 (setq projectile-enable-caching t)
 (setq projectile-file-exists-remote-cache nil)
 (projectile-mode)
-
-(define-key evil-normal-state-map (kbd "-") 'helm-find-files)
-
-(define-key evil-normal-state-map (kbd "SPC SPC") 'helm-M-x)
-(define-key evil-normal-state-map (kbd "SPC f") 'helm-projectile-find-file)
-(define-key evil-normal-state-map (kbd "SPC r") 'helm-mini)
-(define-key evil-normal-state-map (kbd "SPC y") 'helm-show-kill-ring)
-(define-key evil-normal-state-map (kbd "SPC e") 'eval-buffer)
-(define-key evil-normal-state-map (kbd "SPC p") 'helm-projectile-switch-project)
-(define-key evil-normal-state-map (kbd "SPC s") 'helm-projectile-ag)
 
 (provide 'init-helm)

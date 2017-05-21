@@ -20,6 +20,12 @@
 (require-package 'evil-commentary)
 (evil-commentary-mode t)
 
+;; forward search information
+;; Spaceline takes care of status line location so we can disable the anzu display
+(require-package 'evil-anzu)
+(require 'evil-anzu)
+(setq anzu-cons-mode-line-p nil)
+
 (evil-put-property 'evil-state-properties 'normal :tag " NORMAL ")
 (evil-put-property 'evil-state-properties 'insert :tag " INSERT ")
 (evil-put-property 'evil-state-properties 'visual :tag " VISUAL ")
