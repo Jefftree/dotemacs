@@ -23,9 +23,6 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
-;; Display time in status
-(display-time-mode t)
-
 (setq mouse-wheel-progressive-speed nil)
 
 ;; Backup
