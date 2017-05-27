@@ -1,7 +1,6 @@
 (require-package 'jbeans-theme)
 (load-theme 'jbeans t)
 
-
 ; Display/Color Scheme Modifications
 (blink-cursor-mode 0) ; no blink
 
@@ -9,6 +8,9 @@
 
 (require-package 'nlinum)
 (global-nlinum-mode t)
+
+;; (require-package 'nyan-mode)
+;; (nyan-mode)
 
 (set-face-background 'hl-line "darkblue")
 (set-face-foreground 'linum "grey42")
@@ -22,6 +24,10 @@
 
 (spaceline-toggle-minor-modes-off) ; Saves diminish
 (spaceline-toggle-hud-off) ; Bar at very right
+(spaceline-toggle-major-mode-off)
+(spaceline-toggle-buffer-encoding-abbrev-off) ; line ending
+(spaceline-toggle-version-control-off)
+(spaceline-toggle-buffer-position-off) ; Top Bot
 
 (set-face-attribute 'spaceline-evil-emacs nil :background "#5fd7ff")
 (set-face-attribute 'spaceline-evil-insert nil :background "#f0d817")
@@ -31,5 +37,7 @@
 (set-face-attribute 'spaceline-evil-visual nil :background "#fd971f")
 
 (spaceline-spacemacs-theme)
+
+(set-face-attribute 'helm-selection nil :background "darkblue")
 
 (provide 'init-theme)
