@@ -2,6 +2,12 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+(eval-when-compile (require 'cl))
+(lexical-let ((emacs-start-time (current-time)))
+  (add-hook 'emacs-startup-hook
+            (lambda ()
+              (let ((elapsed (float-time (time-subtract (current-time) emacs-start-time))))
+                (message "[Emacs initialized in %.3fs]" elapsed)))))
 (package-initialize)
 
 (add-hook 'emacs-startup-hook 'toggle-frame-maximized)
