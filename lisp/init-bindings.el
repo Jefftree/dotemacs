@@ -35,8 +35,6 @@
     (", x" 'evil-save-modified-and-close)
     (", v" (kbd "C-w v C-w l") "vsplit")
     (", s" (kbd "C-w s C-w j") "ssplit")
-    (", g" 'magit-status)
-    (", b" 'magit-blame)
 
     ("j" 'evil-next-visual-line)
     ("k" 'evil-previous-visual-line)
