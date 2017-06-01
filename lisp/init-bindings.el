@@ -1,5 +1,5 @@
 (require-package 'which-key)
-(setq which-key-idle-delay 0.2)
+(setq which-key-idle-delay 0.8)
 (setq which-key-min-display-lines 3)
 (which-key-mode)
 
@@ -32,6 +32,7 @@
 )
 
 (-define-keys evil-normal-state-map
+    ("Y" "y$")
     (", w" 'save-buffer)
     (", x" 'evil-save-modified-and-close)
     (", v" (kbd "C-w v C-w l") "vsplit")
@@ -62,13 +63,18 @@
 )
 
 (-define-keys evil-normal-state-map
-  ("-" 'helm-find-files)
   ("SPC f" 'my-helm-hydra/body)
-  ("SPC e" 'eval-buffer)
+  ("SPC r" 'eval-buffer)
   ("SPC g" 'my-git-hydra/body)
   ("SPC SPC" 'helm-M-x)
 )
 
-(-define-key evil-normal-state-map (kbd "SPC t") 'neotree-toggle)
+(-define-keys evil-normal-state-map
+  ("SPC t" 'neotree-toggle))
+
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-iswitchb)
 
 (provide 'init-bindings)
