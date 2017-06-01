@@ -27,6 +27,7 @@
 (require 'init-core)
 (require 'init-evil)
 (require 'init-helm)
+(require 'init-hydra)
 (require 'init-company)
 (require 'init-theme)
 (require 'init-flycheck)

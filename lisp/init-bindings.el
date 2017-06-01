@@ -32,6 +32,7 @@
 
 (-define-keys evil-normal-state-map
     (", w" 'save-buffer)
+    (", x" 'evil-save-modified-and-close)
     (", v" (kbd "C-w v C-w l") "vsplit")
     (", s" (kbd "C-w s C-w j") "ssplit")
     (", g" 'magit-status)
@@ -66,6 +67,7 @@
   ("SPC p" 'helm-projectile-switch-project)
   ("SPC s" 'helm-projectile-ag)
   ("SPC v" 'helm-resume)
+  ("SPC g" 'my-git-hydra/body)
   ("SPC SPC" 'helm-M-x)
 )
 
