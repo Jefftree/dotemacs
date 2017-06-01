@@ -24,4 +24,24 @@
   ("R" git-gutter+-unstage-whole-buffer)
 )
 
+(defhydra my-helm-hydra (:hint nil :exit t)
+  "
+   search:   _a_ → apropos   _y_ → kill-ring   _s_ → ag
+             _e_ → mini      _p_ → projectile  _f_ → pf
+             _d_ → imenu     _o_ → switch      _l_ → files
+             _v_ → resume
+
+  "
+  ("a" helm-apropos)
+  ("s" helm-projectile-ag)
+  ("e" helm-mini)
+  ("f" helm-projectile-find-file)
+  ("d" helm-imenu)
+  ("l" helm-find-files)
+  ("p" helm-projectile)
+  ("o" helm-projectile-switch-project)
+  ("v" helm-resume)
+  ("y" helm-show-kill-ring))
+
+
 (provide 'init-hydra)

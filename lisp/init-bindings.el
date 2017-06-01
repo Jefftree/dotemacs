@@ -59,13 +59,8 @@
 
 (-define-keys evil-normal-state-map
   ("-" 'helm-find-files)
-  ("SPC f" 'helm-projectile-find-file)
-  ("SPC r" 'helm-mini)
-  ("SPC y" 'helm-show-kill-ring)
+  ("SPC f" 'my-helm-hydra/body)
   ("SPC e" 'eval-buffer)
-  ("SPC p" 'helm-projectile-switch-project)
-  ("SPC s" 'helm-projectile-ag)
-  ("SPC v" 'helm-resume)
   ("SPC g" 'my-git-hydra/body)
   ("SPC SPC" 'helm-M-x)
 )
