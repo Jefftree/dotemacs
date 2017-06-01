@@ -49,6 +49,10 @@
     ("] q" 'next-error)
 )
 
+(-define-keys evil-insert-state-map
+  ("C-g" 'evil-normal-state)
+)
+
 (-define-keys evil-motion-state-map
   ("M-h" 'evil-window-left)
   ("M-j" 'evil-window-down)
