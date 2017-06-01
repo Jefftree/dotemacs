@@ -24,6 +24,7 @@
 (key-chord-mode 1)
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+(key-chord-define evil-insert-state-map "nh" 'evil-normal-state)
 
 (-define-keys magit-blame-mode-map
   ("<tab>" 'magit-show-commit)
