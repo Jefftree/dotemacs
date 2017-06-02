@@ -9,7 +9,7 @@
 (require-package 'nlinum)
 
 ; Use as a feature toggle instead
-;(global-nlinum-mode nil)
+(global-nlinum-mode t)
 
 ;; (require-package 'nyan-mode)
 ;; (nyan-mode)
