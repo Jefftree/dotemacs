@@ -7,7 +7,9 @@
 (global-hl-line-mode)
 
 (require-package 'nlinum)
-(global-nlinum-mode t)
+
+; Use as a feature toggle instead
+;(global-nlinum-mode nil)
 
 ;; (require-package 'nyan-mode)
 ;; (nyan-mode)
