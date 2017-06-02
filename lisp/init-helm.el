@@ -24,6 +24,14 @@
 ; Use same buffer for split
 (setq helm-split-window-in-side-p t)
 
+
+(require-package 'helm-swoop)
+(setq helm-swoop-pre-input-function #'ignore)
+(setq helm-swoop-use-fuzzy-match t)
+(setq helm-swoop-use-line-number-face t)
+(setq helm-swoop-speed-or-color t)
+
+
 (require-package 'helm-projectile)
 
 (setq projectile-cache-file (concat dotemacs-cache-directory "projectile.cache"))

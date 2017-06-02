@@ -64,6 +64,7 @@
 
 (-define-keys evil-normal-state-map
   ("SPC f" 'my-helm-hydra/body)
+  ("SPC j" 'my-jump-hydra/body)
   ("SPC r" 'eval-buffer)
   ("SPC g" 'my-git-hydra/body)
   ("SPC SPC" 'helm-M-x)

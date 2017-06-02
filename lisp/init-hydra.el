@@ -24,6 +24,18 @@
   ("R" git-gutter+-unstage-whole-buffer)
 )
 
+
+(defhydra my-jump-hydra (:hint nil :exit t)
+  "
+   jump   _i_ → imenu   _k_ → swoop
+          _l_ → multi swoop
+"
+  ("i" helm-semantic-or-imenu)
+  ("k" helm-swoop)
+  ("l" helm-multi-swoop-all)
+)
+
+
 (defhydra my-helm-hydra (:hint nil :exit t)
   "
    search:   _a_ → apropos   _y_ → kill-ring   _s_ → ag
@@ -41,7 +53,8 @@
   ("p" helm-projectile)
   ("o" helm-projectile-switch-project)
   ("v" helm-resume)
-  ("y" helm-show-kill-ring))
+  ("y" helm-show-kill-ring)
+)
 
 
 (provide 'init-hydra)
