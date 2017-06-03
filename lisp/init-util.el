@@ -33,6 +33,9 @@
 (require-package 'color-identifiers-mode)
 (global-color-identifiers-mode)
 
+
+(require-package 'yaml-mode)
+
 (require-package 'diminish)
 (diminish 'flycheck-mode)
 (diminish 'projectile-mode)

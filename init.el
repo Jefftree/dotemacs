@@ -34,6 +34,7 @@
 (require 'init-theme)
 (require 'init-flycheck)
 (require 'init-misc)
+(require 'init-eshell)
 (require 'init-bindings)
 (require 'init-util)
 
