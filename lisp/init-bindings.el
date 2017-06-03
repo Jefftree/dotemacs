@@ -65,8 +65,9 @@
 (-define-keys evil-normal-state-map
   ("SPC f" 'my-helm-hydra/body)
   ("SPC j" 'my-jump-hydra/body)
-  ("SPC r" 'eval-buffer)
   ("SPC g" 'my-git-hydra/body)
+  ("SPC e" 'eshell)
+  ("SPC r" 'eval-buffer)
   ("SPC SPC" 'helm-M-x)
 )
 
@@ -77,5 +78,12 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+(add-hook 'eshell-mode-hook
+    (lambda ()
+        (local-set-key (kbd "M-h") #'evil-window-left)
+        (local-set-key (kbd "M-j") #'evil-window-down)
+        (local-set-key (kbd "M-k") #'evil-window-up)
+        (local-set-key (kbd "M-l") #'evil-window-right)))
 
 (provide 'init-bindings)

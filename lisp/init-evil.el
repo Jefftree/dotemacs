@@ -34,4 +34,5 @@
 (evil-put-property 'evil-state-properties 'replace :tag " REPLACE ")
 (evil-put-property 'evil-state-properties 'operator :tag " OPERATOR ")
 
+(evil-set-initial-state 'eshell-mode 'emacs)
 (provide 'init-evil)

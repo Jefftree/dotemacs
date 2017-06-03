@@ -23,10 +23,24 @@
 
 (setq dotemacs-cache-directory (concat user-emacs-directory ".cache/"))
 
-(defmacro after (feature &rest body))
+(defmacro after (feature &rest body)
+  (declare (indent 1))
+  (cond
+   ((vectorp feature)
+    (let ((prog (macroexp-progn body)))
+      (cl-loop for f across feature
+               do
+               (progn
+                 (setq prog (append `(',f) `(,prog)))
+                 (setq prog (append '(with-eval-after-load) prog))))
+      prog))
+   (t
+    `(with-eval-after-load ,feature ,@body))))
+
 
 (require 'init-elpa)
 (require 'init-core)
+(require 'init-eshell)
 (require 'init-evil)
 (require 'init-helm)
 (require 'init-hydra)
@@ -34,7 +48,6 @@
 (require 'init-theme)
 (require 'init-flycheck)
 (require 'init-misc)
-(require 'init-eshell)
 (require 'init-bindings)
 (require 'init-util)
 

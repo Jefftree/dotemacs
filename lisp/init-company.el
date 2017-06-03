@@ -16,4 +16,7 @@
 (set-face-attribute 'company-tooltip nil :background "black" :foreground "gray40")
 (set-face-attribute 'company-tooltip-selection nil :inherit 'company-tooltip :background "gray15")
 
+(setq company-global-modes
+        '(not eshell-mode org-mode))
+
 (global-company-mode)
