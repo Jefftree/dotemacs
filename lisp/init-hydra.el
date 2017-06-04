@@ -57,4 +57,18 @@
 )
 
 
+(defhydra my-toggle-hydra (:hint nil :exit t)
+  "
+   toggle:  _t_ → truncate lines    _w_ → whitespace    _r_ → rainbow
+            _c_ → company           _l_ → linum
+"
+  ("c" company-mode)
+  ("t" toggle-truncate-lines)
+  ("s" flycheck-mode)
+  ("w" whitespace-mode)
+  ("r" rainbow-mode)
+  ("l" nlinum-mode)
+)
+
+
 (provide 'init-hydra)

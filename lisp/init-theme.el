@@ -8,14 +8,12 @@
 
 (require-package 'nlinum)
 
-; Use as a feature toggle instead
-(global-nlinum-mode t)
+(after 'linum (set-face-foreground 'linum "gray42"))
 
 ;; (require-package 'nyan-mode)
 ;; (nyan-mode)
 
 (set-face-background 'hl-line "darkblue")
-(set-face-foreground 'linum "grey42")
 
 (require-package 'spaceline)
 (require 'spaceline-config)

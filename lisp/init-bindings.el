@@ -64,6 +64,7 @@
 
 (-define-keys evil-normal-state-map
   ("SPC f" 'my-helm-hydra/body)
+  ("SPC t" 'my-toggle-hydra/body)
   ("SPC j" 'my-jump-hydra/body)
   ("SPC g" 'my-git-hydra/body)
   ("SPC e" 'eshell)
@@ -72,7 +73,7 @@
 )
 
 (-define-keys evil-normal-state-map
-  ("SPC t" 'neotree-toggle))
+  ("SPC i" 'neotree-toggle))
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
