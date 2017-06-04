@@ -1,0 +1,2 @@
+alias la ls -lah
+alias ll ls -lh

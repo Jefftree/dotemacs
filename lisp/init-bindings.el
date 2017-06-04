@@ -67,15 +67,17 @@
   ("SPC t" 'my-toggle-hydra/body)
   ("SPC j" 'my-jump-hydra/body)
   ("SPC g" 'my-git-hydra/body)
-  ("SPC s" 'my-colemak-hydra/body)
+  ("SPC c" 'my-colemak-hydra/body)
   ("SPC e" 'eshell)
   ("SPC r" 'eval-buffer)
   ("SPC SPC" 'helm-M-x)
+  ("SPC Q" (lambda () (interactive) (restart-emacs '("--debug-init"))))
 )
 
 (-define-keys evil-normal-state-map
   ("SPC i" 'neotree-toggle))
 
+;; TODO: Rebind
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)

@@ -7,6 +7,8 @@
 (require-package 'neotree)
 (require 'neotree)
 
+(require-package 'restart-emacs)
+
 (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
