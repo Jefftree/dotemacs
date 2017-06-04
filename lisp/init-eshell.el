@@ -1,15 +1,13 @@
-(require-package 'xterm-color)
-(require 'xterm-color)
+(setq eshell-aliases-file (concat user-emacs-directory ".alias"))
+(setq eshell-buffer-maximum-lines 10000)
+(setq eshell-glob-case-insensitive t)
+(setq eshell-banner-message "")
 
-(add-hook 'comint-preoutput-filter-functions #'xterm-color-filter)
-(setq comint-output-filter-functions (remove #'ansi-color-process-output comint-output-filter-functions))
+(add-hook 'eshell-mode-hook
+          (lambda () (setq-local global-hl-line-mode nil)))
 
-(after 'eshell-mode
-  (add-to-list 'eshell-preoutput-filter-functions #'xterm-color-filter)
-  (add-hook 'eshell-mode-hook
-            (lambda ()
-              (setenv "TERM" "xterm-256color")
-              (setq xterm-color-preserve-properties t))))
+;; NOTE: This must be modified if we change the prompt style
+(setq eshell-prompt-regexp "^[^#$]* ❯❯ ")
 
 (setq eshell-prompt-function
   (lambda ()
@@ -17,7 +15,17 @@
       (propertize (abbreviate-file-name (eshell/pwd)) 'face 'font-lock-builtin-face)
       (propertize " ❯" 'face 'eshell-ls-archive)
       (propertize "❯" 'face 'eshell-ls-directory)
-      (propertize " " 'face 'font-lock-preprocessor-face)
+      (propertize " " 'face 'default)
 )))
+
+(defun eshell/ff (&rest args)
+  "Opens a file in emacs."
+  (when (not (null args))
+    (find-file (car args))))
+
+(defun eshell/fo (&rest args)
+  "Opens a file in emacs."
+  (when (not (null args))
+    (find-file-other-window (car args))))
 
 (provide 'init-eshell)
