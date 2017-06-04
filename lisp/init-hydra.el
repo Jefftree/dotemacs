@@ -70,5 +70,12 @@
   ("l" nlinum-mode)
 )
 
+(defhydra my-colemak-hydra (:hint nil :exit t)
+  "
+                                                                            Q W F P G J L U Y ; [ ]
+                                                                             A R S T D H N E I O '
+                                                                              Z X C V B K M , . /
+  "
+)
 
 (provide 'init-hydra)

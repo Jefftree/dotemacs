@@ -67,6 +67,7 @@
   ("SPC t" 'my-toggle-hydra/body)
   ("SPC j" 'my-jump-hydra/body)
   ("SPC g" 'my-git-hydra/body)
+  ("SPC s" 'my-colemak-hydra/body)
   ("SPC e" 'eshell)
   ("SPC r" 'eval-buffer)
   ("SPC SPC" 'helm-M-x)
