@@ -33,6 +33,8 @@
 (require-package 'color-identifiers-mode)
 (global-color-identifiers-mode)
 
+; Save window configs (C-c <left>)
+(winner-mode)
 
 (require-package 'yaml-mode)
 

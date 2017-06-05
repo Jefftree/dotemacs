@@ -22,6 +22,10 @@
 (setq spaceline-highlight-face-func #'spaceline-highlight-face-evil-state) ; Different highlighting for modes
 (setq powerline-default-separator 'wave)
 
+; WIP, prefer vsplit over hsplit
+(setq split-width-threshold 160)
+(setq split-height-threshold nil)
+
 (spaceline-toggle-minor-modes-off) ; Saves diminish
 (spaceline-toggle-hud-off) ; Bar at very right
 (spaceline-toggle-major-mode-off)
