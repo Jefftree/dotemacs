@@ -47,6 +47,7 @@
 (require 'init-theme)
 (require 'init-flycheck)
 (require 'init-eshell)
+(require 'init-org)
 (require 'init-misc)
 (require 'init-bindings)
 (require 'init-util)

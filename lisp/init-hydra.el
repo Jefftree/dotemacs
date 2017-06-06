@@ -78,4 +78,13 @@
   "
 )
 
+
+(defhydra my-org-hydra (:hint nil :exit t)
+  "
+   toggle:  _a_ → agenda
+  "
+  ("a" org-agenda)
+
+)
+
 (provide 'init-hydra)
