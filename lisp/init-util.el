@@ -38,16 +38,4 @@
 
 (require-package 'yaml-mode)
 
-(require-package 'diminish)
-(diminish 'flycheck-mode)
-(diminish 'projectile-mode)
-(diminish 'helm-mode)
-(diminish 'undo-tree-mode)
-(diminish 'company-mode)
-(diminish 'which-key-mode)
-(diminish 'git-gutter+-mode)
-(diminish 'color-identifiers-mode)
-(diminish 'auto-revert-mode)
-(diminish 'evil-commentary-mode)
-
 (provide 'init-util)
