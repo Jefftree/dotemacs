@@ -35,6 +35,10 @@
   ("l" helm-multi-swoop-all)
 )
 
+;; TODO: Establish naming convention
+(defun switch-to-projects nil
+    (interactive)
+    (helm-find-files-1 (expand-file-name "~/workspace/")))
 
 (defhydra my-helm-hydra (:hint nil :exit t)
   "
@@ -45,6 +49,7 @@
 
   "
   ("a" helm-apropos)
+  ("i" switch-to-projects)
   ("s" helm-projectile-ag)
   ("e" helm-mini)
   ("f" helm-projectile-find-file)
