@@ -9,7 +9,8 @@
               (let ((elapsed (float-time (time-subtract (current-time) emacs-start-time))))
                 (message "[Emacs initialized in %.3fs]" elapsed)))))
 
-(setq gc-cons-threshold (* 256 1024 1024))
+; Magical
+(setq gc-cons-threshold 777777)
 (package-initialize)
 
 (add-hook 'emacs-startup-hook 'toggle-frame-maximized)
