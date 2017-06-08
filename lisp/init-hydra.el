@@ -71,7 +71,7 @@
   ("t" toggle-truncate-lines)
   ("s" flycheck-mode)
   ("w" whitespace-mode)
-  ("r" rainbow-mode)
+  ("r" color-identifiers-mode)
   ("l" nlinum-mode)
 )
 
