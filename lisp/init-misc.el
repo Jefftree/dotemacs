@@ -7,6 +7,8 @@
 (require-package 'neotree)
 (require 'neotree)
 
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
 (require-package 'restart-emacs)
 
 (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
