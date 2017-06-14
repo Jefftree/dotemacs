@@ -33,6 +33,7 @@
   ("i" helm-semantic-or-imenu)
   ("k" helm-swoop)
   ("l" helm-multi-swoop-all)
+  ("d" dumb-jump-go)
 )
 
 ;; TODO: Establish naming convention
