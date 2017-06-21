@@ -16,4 +16,10 @@
 (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
 (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
 
+(require-package 'yasnippet)
+
+(require 'yasnippet)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+(yas-load-directory (concat user-emacs-directory "/snippets"))
+
 (provide 'init-misc)
