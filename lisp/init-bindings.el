@@ -52,6 +52,8 @@
 
 (-define-keys evil-insert-state-map
   ("C-g" 'evil-normal-state)
+  ("C-e" 'evil-end-of-line)
+  ("C-a" 'evil-first-non-blank)
 )
 
 (-define-keys evil-motion-state-map
@@ -83,6 +85,13 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+(define-key global-map (kbd "C-=") 'text-scale-increase)
+(define-key global-map (kbd "C--") 'text-scale-decrease)
+
+(after 'helm
+  (global-set-key [remap execute-extended-command] #'helm-M-x)
+)
 
 (add-hook 'eshell-mode-hook
     (lambda ()
