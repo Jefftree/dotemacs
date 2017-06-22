@@ -50,7 +50,7 @@
 (require 'init-eshell)
 (require 'init-org)
 (require 'init-misc)
-(require 'init-bindings)
 (require 'init-util)
+(require 'init-bindings)
 
 (setq default-directory "~/" )

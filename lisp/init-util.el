@@ -21,6 +21,12 @@
               :test #'equal))
 (add-ssh-agent-to-tramp)
 
+(require 'desktop)
+(setq desktop-dirname dotemacs-cache-directory)
+(add-to-list 'desktop-path dotemacs-cache-directory)
+
+(desktop-save-mode 1)
+
 (if (display-graphic-p)
     (progn
       (require-package 'git-gutter-fringe+)
