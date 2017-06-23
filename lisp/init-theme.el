@@ -1,6 +1,9 @@
 (require-package 'jbeans-theme)
 (load-theme 'jbeans t)
 
+(when (member "Ubuntu Mono" (font-family-list))
+  (set-frame-font "Ubuntu Mono 14"))
+
 ; Display/Color Scheme Modifications
 (blink-cursor-mode 0) ; no blink
 
