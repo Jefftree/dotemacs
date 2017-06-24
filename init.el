@@ -43,7 +43,6 @@
 (require 'init-core)
 (require 'init-evil)
 (require 'init-helm)
-(require 'init-hydra)
 (require 'init-company)
 (require 'init-theme)
 (require 'init-flycheck)
@@ -51,6 +50,7 @@
 (require 'init-org)
 (require 'init-misc)
 (require 'init-util)
+(require 'init-hydra)
 (require 'init-bindings)
 
 (setq default-directory "~/" )
