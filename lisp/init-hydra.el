@@ -27,13 +27,14 @@
 
 (defhydra my-jump-hydra (:hint nil :exit t)
   "
-   jump   _i_ → imenu   _k_ → swoop
+   jump   _i_ → imenu   _k_ → swoop   _c_ → avy char
           _l_ → multi swoop
 "
   ("i" helm-semantic-or-imenu)
   ("k" helm-swoop)
   ("l" helm-multi-swoop-all)
   ("d" dumb-jump-go)
+  ("c" avy-goto-char)
 )
 
 ;; TODO: Establish naming convention

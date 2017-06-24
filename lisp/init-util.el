@@ -46,4 +46,6 @@
 (require-package 'dumb-jump)
 (setq dumb-jump-selector 'helm)
 
+(require-package 'avy)
+
 (provide 'init-util)
