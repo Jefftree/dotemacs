@@ -104,7 +104,12 @@ Assumes that the frame is only split into two."
    toggle:  _a_ → agenda
   "
   ("a" org-agenda)
+)
 
+(defhydra my-window-hydra (:hint nil :exit t)
+  ("u" winner-undo "undo")
+  ("s" window-configuration-to-register "save")
+  ("r" jump-to-register "load")
 )
 
 (provide 'init-hydra)

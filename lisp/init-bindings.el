@@ -66,6 +66,7 @@
 
 (-define-keys evil-normal-state-map
   ("SPC f" 'my-helm-hydra/body)
+  ("SPC w" 'my-window-hydra/body)
   ("SPC a" 'my-org-hydra/body)
   ("SPC t" 'my-toggle-hydra/body)
   ("SPC j" 'my-jump-hydra/body)
