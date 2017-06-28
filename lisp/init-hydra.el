@@ -107,9 +107,10 @@ Assumes that the frame is only split into two."
 )
 
 (defhydra my-window-hydra (:hint nil :exit t)
-  ("u" winner-undo "undo")
+  ("p" winner-undo "undo" :color red)
   ("s" window-configuration-to-register "save")
   ("r" jump-to-register "load")
+  ("n" winner-redo "redo")
 )
 
 (provide 'init-hydra)
