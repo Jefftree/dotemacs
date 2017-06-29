@@ -1,6 +1,6 @@
 ;;; tree-theme.el
 
-;; Forked from <https://github.com/synic/tree-emacs>
+;; Forked from <https://github.com/synic/jbeans-emacs>
 (deftheme tree "The tree color theme")
 
 (let ((class '((class color) (min-colors 89)))
@@ -60,11 +60,7 @@
       (custom-theme-set-faces
        'tree
        `(default                             ((,class (:foreground ,tree-fg :background ,tree-bg))))
-;;;;; ACE/Avy
-       `(aw-leading-char-face                ((,class (:foreground ,tree-red-3 :height 1.2))))
-;;;;; Alchemist
-       `(alchemist-test--failed-face         ((,class (:foreground ,tree-red-1))))
-       `(alchemist-test--success-face        ((,class (:foreground ,tree-green-5))))
+
 ;;;;; Company
        `(company-preview-common              ((,class (:foreground nil :background ,tree-purple-4))))
        `(company-scrollbar-bg                ((,class (:background ,tree-grey-0))))
@@ -74,6 +70,7 @@
        `(company-tooltip-common              ((,class (:inherit company-tooltip :weight bold :underline nil))))
        `(company-tooltip-common-selection    ((,class (:inherit company-tooltip-selection :foreground ,tree-fg :underline nil :weight bold))))
        `(company-tooltip-selection           ((,class (:background ,tree-purple-4))))
+
 ;;;;; Compilation
        `(compilation-error                   ((,class (:foreground ,tree-red-1))))
        `(compilation-info                    ((,class (:foreground ,tree-yellow-3))))
@@ -81,6 +78,7 @@
        `(compilation-mode-line-exit          ((,class (:foreground ,tree-green-5))))
        `(compilation-mode-line-fail          ((,class (:foreground ,tree-red-1))))
        `(compilation-mode-line-run           ((,class (:foreground ,tree-yellow-3))))
+
 ;;;;; Dired
        `(diredp-compressed-file-name         ((,class (:foreground ,tree-red-7))))
        `(diredp-compressed-file-suffix       ((,class (:foreground ,tree-fg))))
@@ -101,25 +99,25 @@
        `(diredp-symlink                      ((,class (:foreground ,tree-blue-0))))
        `(diredp-dir-name                     ((,class (:foreground ,tree-blue-2))))
        `(diredp-write-priv                   ((,class (:foreground ,tree-blue-0 :background ,tree-bg))))
+
 ;;;;; Emmet
        `(emmet-preview-output                ((,class (:background ,tree-purple-4))))
-;;;;; Elixir
-       `(elixir-atom-face                    ((,class (:foreground ,tree-blue-1))))
+
 ;;;;; ERC
        `(erc-notice-face                     ((,class (:foreground ,tree-yellow-3))))
        `(erc-prompt-face                     ((,class (:foreground ,tree-fg))))
        `(erc-timestamp-face                  ((,class (:foreground ,tree-blue-0))))
+
 ;;;;;; EShell
        `(eshell-prompt                       ((,class (:foreground ,tree-red-1))))
        `(eshell-ls-directory                 ((,class (:weight normal :foreground ,tree-green-6))))
        `(eshell-ls-executable                ((,class (:weight normal :foreground ,tree-red-1))))
        `(eshell-ls-product                   ((,class (:foreground ,tree-fg))))
        `(eshell-ls-symlink                   ((,class (:weight normal :foreground ,tree-purple-1))))
+
 ;;;;; Evil
        `(evil-visual-mark-face               ((,class (:weight ultra-bold :box ,tree-blue-0 :foreground ,tree-green-7))))
-;;;;; FCI Ruler
-       ;; As of now, this does nothing, because fci-rule-color is not a face yet.
-       `(fci-rule-color                      ((,class (:foreground ,tree-grey-4 :background ,tree-grey-4))))
+
 ;;;;; Fonts
        `(font-lock-builtin-face              ((,class (:foreground ,tree-blue-1))))
        `(font-lock-comment-face              ((,class (:slant italic :foreground ,tree-grey-7))))
@@ -134,10 +132,13 @@
        `(font-lock-warning-face              ((,class (:foreground ,tree-red-4))))
        `(font-lock-regexp-grouping-construct ((,class (:foreground ,tree-yellow-3 :bold t))))
        `(font-lock-regexp-grouping-backslash ((,class (:foreground ,tree-red-1 :bold t))))
+
 ;;;;; Fringe
        `(fringe                              ((,class (:foreground ,tree-fg :background ,tree-bg))))
+
 ;;;;; Header
        `(header-line                         ((,class (:foreground ,tree-fg))))
+
 ;;;;; Helm
        `(helm-visible-mark                   ((,class (:background ,tree-green-4 :foreground ,tree-bg))))
        `(helm-buffer-file                    ((,class (:foreground ,tree-fg))))
@@ -156,18 +157,22 @@
        `(helm-ff-file                        ((,class (:foreground ,tree-fg))))
        `(helm-ff-directory                   ((,class (:foreground ,tree-blue-2))))
        `(helm-ff-executable                  ((,class (:foreground ,tree-green-5))))
+
 ;;;;; Highlight
        `(highlight                           ((,class (:background ,tree-grey-3))))
        `(hl-line                             ((,class (:background ,tree-grey-2))))
+
 ;;;;; iSearch
        `(isearch                             ((,class (:foreground ,tree-fg :background ,tree-red-4))))
        `(isearch-fail                        ((,class (:background ,tree-red-4))))
+
 ;;;;; Ido
        `(ido-first-match                     ((,class (:foreground ,tree-yellow-3))))
        `(ido-only-match                      ((,class (:foreground ,tree-green-5))))
        `(ido-subdir                          ((,class (:foreground ,tree-fg))))
        `(ido-virtual                         ((,class (:foreground
                                                        ,tree-blue-0))))
+
 ;;;;; Ivy
        `(ivy-current-match                   ((,class (:background ,tree-grey-3))))
        `(ivy-minibuffer-match-face-1         ((,class (:foreground ,tree-yellow-3))))
@@ -176,6 +181,7 @@
        `(ivy-minibuffer-match-face-4         ((,class (:foreground ,tree-purple-1))))
        `(ivy-subdir                          ((,class (:foreground ,tree-green-4))))
        `(ivy-modified-buffer                 ((,class (:foreground ,tree-red-2))))
+
 ;;;;; Jabber
        `(jabber-activity-personal-face       ((,class (:foreground ,tree-green-6 :weight bold))))
        `(jabber-activity-face                ((,class (:foreground ,tree-red-3 :weight bold))))
@@ -184,10 +190,13 @@
        `(jabber-chat-prompt-system           ((,class (:foreground ,tree-green-6))))
        `(jabber-chat-prompt-local            ((,class (:foreground ,tree-blue-0))))
        `(jabber-chat-prompt-foreign          ((,class (:foreground ,tree-green-2))))
+
 ;;;;; Lazy highlight
        `(lazy-highlight                      ((,class (:foreground ,tree-red-4 :background nil))))
+
 ;;;;; Linum
-       `(linum                               ((,class (:foreground ,tree-grey-5 :background ,tree-grey-2))))
+       `(linum                               ((,class (:foreground ,tree-grey-6 :background ,tree-grey-2))))
+
 ;;;;; Ediff
        `(ediff-even-diff-A                   ((,class (:background ,tree-grey-2 :foreground ,tree-fg))))
        `(ediff-even-diff-B                   ((,class (:background ,tree-grey-3 :foreground ,tree-fg))))
@@ -195,10 +204,7 @@
        `(ediff-odd-diff-A                    ((,class (:background ,tree-grey-2 :foreground ,tree-fg))))
        `(ediff-odd-diff-B                    ((,class (:background ,tree-grey-3 :foreground ,tree-fg))))
        `(ediff-odd-diff-C                    ((,class (:background ,tree-grey-5 :foreground ,tree-fg))))
-       `(powerline-active1                   ((,class (:inherit mode-line :background ,tree-bg))))
-       `(powerline-active2                   ((,class (:inherit mode-line :background ,tree-grey-3))))
-       `(powerline-inactive1                 ((,class (:inherit mode-line :background ,tree-bg))))
-       `(powerline-inactive2                 ((,class (:inherit mode-line :background ,tree-grey-2))))
+
 ;;;;; flycheck
        `(flycheck-error                      ((((supports :underline (:style wave)))
                                                (:underline (:style wave :color ,tree-red-4) :inherit unspecified))
@@ -212,6 +218,7 @@
        `(flycheck-fringe-error               ((,class (:foreground ,tree-red-4 :weight bold))))
        `(flycheck-fringe-warning             ((,class (:foreground ,tree-yellow-3 :weight bold))))
        `(flycheck-fringe-info                ((,class (:foreground ,tree-blue-5 :weight bold))))
+
 ;;;;; flyspell
        `(flyspell-duplicate                  ((((supports :underline (:style wave)))
                                                (:underline (:style wave :color ,tree-orange-1) :inherit unspecified))
@@ -219,14 +226,17 @@
        `(flyspell-incorrect                  ((((supports :underline (:style wave)))
                                                (:underline (:style wave :color ,tree-red-8) :inherit unspecified))
                                               (,class (:underline (:style line :color ,tree-red-8)))))
+
 ;;;;; Git
        `(git-commit-comment-file             ((,class (:background ,tree-bg :foreground ,tree-fg))))
        `(git-commit-summary                  ((,class (:background ,tree-bg :foreground ,tree-blue-0))))
        `(git-commit-comment-heading          ((,class (:foreground ,tree-yellow-3))))
+
 ;;;;; Git-gutter
        `(git-gutter-fr+-modified             ((,class (:foreground ,tree-blue-3 :background ,tree-bg))))
        `(git-gutter-fr+-added                ((,class (:foreground ,tree-green-2 :background ,tree-bg))))
        `(git-gutter-fr+-deleted              ((,class (:foreground ,tree-red-5 :background ,tree-bg))))
+
 ;;;;; Magit
        `(magit-blame-heading                 ((,class (:background ,tree-grey-2 :box ,tree-purple-4 :weight bold :foreground ,tree-fg))))
        `(magit-blame-date                    ((,class (:background ,tree-grey-0 :box ,tree-green-3 :weight bold :foreground ,tree-green-5))))
@@ -306,39 +316,52 @@
        `(magit-signature-good                ((,class (:foreground ,tree-green-7))))
        `(magit-signature-untrusted           ((,class (:foreground ,tree-blue-5))))
        `(magit-tag                           ((,class (:foreground ,tree-yellow-2))))
+
 ;;;;; Match
        `(match                               ((,class (:background ,tree-red-4))))
+
 ;;;;; Minibuffer
        `(minibuffer-prompt                   ((,class (:foreground ,tree-yellow-3))))
+
 ;;;;; Modeline
        `(mode-line                           ((,class (:foreground ,tree-fg :background ,tree-grey-3))))
        `(mode-line-inactive                  ((,class (:foreground ,tree-grey-6 :background ,tree-grey-0))))
+
 ;;;;; NeoTree
        `(neo-dir-link-face                   ((,class (:foreground ,tree-blue-0))))
        `(neo-file-link-face                  ((,class (:foreground ,tree-fg))))
+
 ;;;;; Org
        `(org-checkbox                        ((,class (:foreground ,tree-green-5))))
        `(org-date                            ((,class (:foreground ,tree-blue-0))))
        `(org-document-title                  ((,class (:foreground ,tree-red-9))))
-       `(org-done                            ((,class (:foreground ,tree-green-2))))
+       `(org-todo                            ((,class (:foreground ,tree-red-3 :weight bold))))
+       `(org-done                            ((,class (:foreground ,tree-green-6))))
        `(org-level-1                         ((,class (:foreground ,tree-orange-0 :weight bold))))
-       `(org-level-2                         ((,class (:foreground ,tree-green-5 :weight bold))))
-       `(org-level-3                         ((,class (:foreground ,tree-red-0))))
+       `(org-level-2                         ((,class (:foreground ,tree-blue-2))))
+       `(org-level-3                         ((,class (:foreground ,tree-yellow-2))))
+       `(org-level-4                         ((,class (:foreground ,tree-red-3))))
+       `(org-level-5                         ((,class (:foreground ,tree-green-1))))
+       `(org-level-6                         ((,class (:foreground ,tree-purple-1))))
        `(org-link                            ((,class (:foreground ,tree-blue-1))))
        `(org-special-keyword                 ((,class (:foreground ,tree-blue-0))))
        `(org-table                           ((,class (:foreground ,tree-orange-0))))
-       `(org-todo                            ((,class (:foreground ,tree-red-1))))
+
 ;;;;; Region
        `(region                              ((,class (:background ,tree-grey-3))))
+
 ;;;;; SHM
        `(shm-current-face                    ((,class (:background ,tree-grey-4))))
        `(shm-quarantine-face                 ((,class (:background ,tree-red-4))))
+
 ;;;;; Smerge
        `(smerge-markers                      ((,class (:foreground ,tree-yellow-3 :background ,tree-grey-0))))
        `(smerge-refined-change               ((,class (:foreground ,tree-green-5))))
+
 ;;;;; SmartParens
        `(sp-pair-overlay-face                ((((class color) (min-colors 89)) (:background ,tree-grey-2))))
        `(sp-show-pair-match-face             ((((class color) (min-colors 89)) (:background ,tree-grey-5))))
+
 ;;;;; Spaceline
        `(spaceline-evil-normal               ((,class (:foreground ,tree-bg :background ,tree-orange-2))))
        `(spaceline-evil-motion               ((,class (:foreground ,tree-bg :background ,tree-purple-2))))
@@ -346,6 +369,7 @@
        `(spaceline-evil-visual               ((,class (:foreground ,tree-bg :background ,tree-grey-5))))
        `(spaceline-evil-replace              ((,class (:foreground ,tree-bg :background ,tree-red-1))))
        `(spaceline-evil-emacs                ((,class (:foreground ,tree-bg :background ,tree-blue-5))))
+
 ;;;;; Spacemacs
        `(spacemacs-normal-face               ((,class (:foreground ,tree-bg :background ,tree-orange-2))))
        `(spacemacs-motion-face               ((,class (:foreground ,tree-bg :background ,tree-purple-2))))
@@ -357,15 +381,19 @@
        `(spacemacs-iedit-insert-face         ((,class (:foreground ,tree-bg :background ,tree-red-8))))
        `(spacemacs-evilified-face            ((,class (:foreground ,tree-bg :background ,tree-green-3))))
        `(spacemacs-emacs-face                ((,class (:foreground ,tree-bg :background ,tree-blue-5))))
+
 ;;;;; TabBar
        `(tabbar-default                      ((,class (:inherit variable-pitch :background ,tree-bg :foreground ,tree-fg :height 0.8))))
        `(tabbar-modified                     ((,class (:inherit tabbar-default :foreground ,tree-green-5 :box (:line-width 1 :color ,tree-grey-5 style: released-button)))))
        `(tabbar-selected                     ((,class (:inherit tabbar-default :foreground ,tree-blue-0 :box (:line-width 1 :color ,tree-fg style: released-button)))))
        `(tabbar-unselected                   ((,class (:inherit tabbar-default :box (:line-width 1 :color ,tree-grey-6 style: released-button)))))
+
 ;;;;; Whitespace
        `(trailing-whitespace                 ((,class (:background ,tree-red-4))))
+
 ;;;;; Vertical border
        `(vertical-border                     ((,class (:foreground ,tree-grey-3))))
+
 ;;;;; Web Mode
        `(web-mode-builtin-face               ((,class (:foreground ,tree-blue-1))))
        `(web-mode-html-attr-name-face        ((,class (:foreground ,tree-blue-0))))
@@ -374,6 +402,7 @@
        `(web-mode-function-name-face         ((,class (:foreground ,tree-orange-0))))
        `(web-mode-block-control-face         ((,class (:foreground ,tree-red-1))))
        `(web-mode-variable-name-face         ((,class (:foreground ,tree-blue-2))))
+
 ;;;;; More Whitespace
        `(whitespace-trailing                 ((,class (:background ,tree-red-4))))))
 

@@ -16,8 +16,6 @@
 ;; This is required for new machines
 ;; (all-the-icons-install-fonts)
 
-(after 'linum (set-face-foreground 'linum "gray42"))
-
 ;; (require-package 'nyan-mode)
 ;; (nyan-mode)
 

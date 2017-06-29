@@ -74,6 +74,7 @@
   ("SPC c" 'my-colemak-hydra/body)
   ("SPC e" 'eshell)
   ("SPC r" 'eval-buffer)
+  ("SPC k" 'helm-colors)
   ("SPC SPC" 'helm-M-x)
   ("SPC Q" (lambda () (interactive) (restart-emacs '("--debug-init"))))
 )
