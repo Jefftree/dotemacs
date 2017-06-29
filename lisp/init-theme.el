@@ -23,6 +23,10 @@
 
 (set-face-background 'hl-line "darkblue")
 
+(require-package 'rainbow-mode)
+(require 'rainbow-mode)
+(setq rainbow-x-colors 0) ;; Disable highlighting words like "red" "yellow"
+
 (require-package 'spaceline)
 (require 'spaceline-config)
 
