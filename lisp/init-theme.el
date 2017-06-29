@@ -1,5 +1,5 @@
-(require-package 'jbeans-theme)
-(load-theme 'jbeans t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'tree)
 
 (when (member "Ubuntu Mono" (font-family-list))
   (set-frame-font "Ubuntu Mono 14"))
