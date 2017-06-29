@@ -87,7 +87,7 @@ Assumes that the frame is only split into two."
   ("w" whitespace-mode)
   ("r" color-identifiers-mode)
   ("l" nlinum-mode)
-  ("w" toggle-frame-split)
+  ("v" toggle-frame-split)
 )
 
 (defhydra my-colemak-hydra (:hint nil :exit t)
