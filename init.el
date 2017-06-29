@@ -7,7 +7,7 @@
   (add-hook 'emacs-startup-hook
             (lambda ()
               (let ((elapsed (float-time (time-subtract (current-time) emacs-start-time))))
-                (message "[Emacs initialized in %.3fs]" elapsed)))))
+                (message "[Emacs initialized in %\.3fs]" elapsed)))))
 
 ; Magical
 (setq gc-cons-threshold 777777)
