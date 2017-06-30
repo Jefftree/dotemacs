@@ -315,10 +315,10 @@
 ;;;;; Modeline
        `(mode-line                           ((,class (:foreground ,tree-green-6 :background ,tree-grey-0))))
        `(mode-line-inactive                  ((,class (:foreground ,tree-grey-6 :background ,tree-grey-0))))
-       `(powerline-active1 ((t (:background ,tree-grey-2 :inherit mode-line))))
-       `(powerline-active2 ((t (:background ,tree-grey-0 :inherit mode-line))))
-       `(powerline-inactive1 ((t (:background ,tree-grey-1 :inherit mode-line-inactive))))
-       `(powerline-inactive2 ((t (:background ,tree-grey-1 :inherit mode-line-inactive))))
+       `(powerline-active1 ((,class (:background ,tree-grey-2 :inherit mode-line))))
+       `(powerline-active2 ((,class (:background ,tree-grey-0 :inherit mode-line))))
+       `(powerline-inactive1 ((,class (:background ,tree-grey-1 :inherit mode-line-inactive))))
+       `(powerline-inactive2 ((,class (:background ,tree-grey-1 :inherit mode-line-inactive))))
 
 ;;;;; NeoTree
        `(neo-dir-link-face                   ((,class (:foreground ,tree-blue-0))))
