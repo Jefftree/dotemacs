@@ -62,14 +62,11 @@
        `(default                             ((,class (:foreground ,tree-fg :background ,tree-bg))))
 
 ;;;;; Company
-       `(company-preview-common              ((,class (:foreground nil :background ,tree-purple-4))))
+       `(company-tooltip ((, class (:foreground ,tree-fg :background ,tree-grey-0))))
+       `(company-scrollbar-fg                ((,class (:background ,tree-grey-1))))
        `(company-scrollbar-bg                ((,class (:background ,tree-grey-0))))
-       `(company-scrollbar-fg                ((,class (:background ,tree-grey-7))))
-       `(company-tooltip                     ((,class (:background ,tree-grey-0 :foreground ,tree-fg :weight bold))))
-       `(company-tooltip-annotation          ((,class (:inherit company-tooltip :foreground ,tree-blue-0))))
-       `(company-tooltip-common              ((,class (:inherit company-tooltip :weight bold :underline nil))))
-       `(company-tooltip-common-selection    ((,class (:inherit company-tooltip-selection :foreground ,tree-fg :underline nil :weight bold))))
-       `(company-tooltip-selection           ((,class (:background ,tree-purple-4))))
+       `(company-tooltip-selection           ((,class (:background ,tree-purple-3))))
+       `(company-tooltip-common              ((,class (:foreground, tree-red-8, :inherit company-tooltip :weight bold :underline nil))))
 
 ;;;;; Compilation
        `(compilation-error                   ((,class (:foreground ,tree-red-1))))
@@ -353,10 +350,6 @@
 
 ;;;;; Region
        `(region                              ((,class (:background ,tree-grey-3))))
-
-;;;;; SHM
-       `(shm-current-face                    ((,class (:background ,tree-grey-4))))
-       `(shm-quarantine-face                 ((,class (:background ,tree-red-4))))
 
 ;;;;; Smerge
        `(smerge-markers                      ((,class (:foreground ,tree-yellow-3 :background ,tree-grey-0))))
