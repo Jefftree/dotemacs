@@ -97,14 +97,6 @@
        `(diredp-dir-name                     ((,class (:foreground ,tree-blue-2))))
        `(diredp-write-priv                   ((,class (:foreground ,tree-blue-0 :background ,tree-bg))))
 
-;;;;; Emmet
-       `(emmet-preview-output                ((,class (:background ,tree-purple-4))))
-
-;;;;; ERC
-       `(erc-notice-face                     ((,class (:foreground ,tree-yellow-3))))
-       `(erc-prompt-face                     ((,class (:foreground ,tree-fg))))
-       `(erc-timestamp-face                  ((,class (:foreground ,tree-blue-0))))
-
 ;;;;;; EShell
        `(eshell-prompt                       ((,class (:foreground ,tree-red-1))))
        `(eshell-ls-directory                 ((,class (:weight normal :foreground ,tree-green-6))))
@@ -321,10 +313,10 @@
        `(minibuffer-prompt                   ((,class (:foreground ,tree-yellow-3))))
 
 ;;;;; Modeline
-       `(mode-line                           ((,class (:foreground ,tree-green-6 :background ,tree-grey-3))))
+       `(mode-line                           ((,class (:foreground ,tree-green-6 :background ,tree-grey-0))))
        `(mode-line-inactive                  ((,class (:foreground ,tree-grey-6 :background ,tree-grey-0))))
-       `(powerline-active1 ((t (:background ,tree-grey-3 :inherit mode-line))))
-       `(powerline-active2 ((t (:background ,tree-grey-2 :inherit mode-line))))
+       `(powerline-active1 ((t (:background ,tree-grey-2 :inherit mode-line))))
+       `(powerline-active2 ((t (:background ,tree-grey-0 :inherit mode-line))))
        `(powerline-inactive1 ((t (:background ,tree-grey-1 :inherit mode-line-inactive))))
        `(powerline-inactive2 ((t (:background ,tree-grey-1 :inherit mode-line-inactive))))
 
