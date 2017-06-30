@@ -151,7 +151,7 @@
        `(helm-match                          ((,class (:foreground ,tree-red-4 :background ,tree-bg))))
        `(helm-moccur-buffer                  ((,class (:foreground ,tree-yellow-3))))
        `(helm-selection                      ((,class (:background ,tree-grey-3))))
-       `(helm-source-header                  ((,class (:foreground ,tree-yellow-3 :background ,tree-grey-0))))
+       `(helm-source-header                  ((,class (:foreground ,tree-fg :bold t :background ,tree-green-4))))
        `(helm-swoop-target-line-face         ((,class (:foreground ,tree-fg :background ,tree-grey-4))))
        `(helm-swoop-target-word-face         ((,class (:foreground ,tree-red-4))))
        `(helm-ff-file                        ((,class (:foreground ,tree-fg))))
@@ -324,12 +324,12 @@
        `(minibuffer-prompt                   ((,class (:foreground ,tree-yellow-3))))
 
 ;;;;; Modeline
-       `(mode-line                           ((,class (:foreground ,tree-fg :background ,tree-grey-3))))
+       `(mode-line                           ((,class (:foreground ,tree-green-6 :background ,tree-grey-3))))
        `(mode-line-inactive                  ((,class (:foreground ,tree-grey-6 :background ,tree-grey-0))))
-       `(powerline-active1 ((t (:background ,tree-grey-5 :inherit mode-line))))
-       `(powerline-active2 ((t (:background ,tree-grey-3 :inherit mode-line))))
+       `(powerline-active1 ((t (:background ,tree-grey-3 :inherit mode-line))))
+       `(powerline-active2 ((t (:background ,tree-grey-2 :inherit mode-line))))
        `(powerline-inactive1 ((t (:background ,tree-grey-1 :inherit mode-line-inactive))))
-       `(powerline-inactive2 ((t (:background ,tree-grey-3 :inherit mode-line-inactive))))
+       `(powerline-inactive2 ((t (:background ,tree-grey-1 :inherit mode-line-inactive))))
 
 ;;;;; NeoTree
        `(neo-dir-link-face                   ((,class (:foreground ,tree-blue-0))))
@@ -366,19 +366,12 @@
        `(sp-pair-overlay-face                ((((class color) (min-colors 89)) (:background ,tree-grey-2))))
        `(sp-show-pair-match-face             ((((class color) (min-colors 89)) (:background ,tree-grey-5))))
 
-;;;;; Spaceline
-       `(spaceline-evil-normal               ((,class (:foreground ,tree-bg :background ,tree-orange-2))))
-       `(spaceline-evil-motion               ((,class (:foreground ,tree-bg :background ,tree-purple-2))))
-       `(spaceline-evil-insert               ((,class (:foreground ,tree-bg :background ,tree-green-2))))
-       `(spaceline-evil-visual               ((,class (:foreground ,tree-bg :background ,tree-grey-5))))
-       `(spaceline-evil-replace              ((,class (:foreground ,tree-bg :background ,tree-red-1))))
-       `(spaceline-evil-emacs                ((,class (:foreground ,tree-bg :background ,tree-blue-5))))
-
 ;;;;; Spacemacs
        `(spacemacs-normal-face               ((,class (:foreground ,tree-bg :background ,tree-orange-2))))
        `(spacemacs-motion-face               ((,class (:foreground ,tree-bg :background ,tree-purple-2))))
        `(spacemacs-insert-face               ((,class (:foreground ,tree-bg :background ,tree-green-2))))
        `(spacemacs-visual-face               ((,class (:foreground ,tree-bg :background ,tree-grey-5))))
+(setq ns-use-srgb-colorspace nil)
        `(spacemacs-lisp-face                 ((,class (:foreground ,tree-bg :background ,tree-purple-1))))
        `(spacemacs-replace-face              ((,class (:foreground ,tree-bg :background ,tree-red-1))))
        `(spacemacs-iedit-face                ((,class (:foreground ,tree-bg :background ,tree-red-8))))

@@ -31,6 +31,7 @@
 (spaceline-helm-mode)
 (setq spaceline-highlight-face-func #'spaceline-highlight-face-evil-state) ; Different highlighting for modes
 (setq powerline-default-separator 'wave)
+(setq ns-use-srgb-colorspace nil) ; Fix powerline inconsistent colors
 
 ; WIP, prefer vsplit over hsplit
 (setq split-width-threshold 160)
