@@ -1,6 +1,6 @@
 (require-package 'hydra)
 
-(defhydra my-git-hydra (:hint nil :exit t)
+(defhydra my-git-hydra (:hint nil :exit t :idle 0.5)
   "
    magit:  _s_ → status  _l_ → log    _f_ → file \
    staging:  _a_ → +hunk  _A_ → +buffer
@@ -25,7 +25,7 @@
 )
 
 
-(defhydra my-jump-hydra (:hint nil :exit t)
+(defhydra my-jump-hydra (:hint nil :exit t :idle 0.5)
   "
    jump   _i_ → imenu   _k_ → swoop   _c_ → avy char
           _l_ → multi swoop
@@ -42,7 +42,7 @@
     (interactive)
     (helm-find-files-1 (expand-file-name "~/workspace/")))
 
-(defhydra my-helm-hydra (:hint nil :exit t)
+(defhydra my-helm-hydra (:hint nil :exit t :idle 0.5)
   "
    search:   _a_ → apropos   _y_ → kill-ring   _s_ → ag
              _e_ → mini      _p_ → projectile  _f_ → pf
@@ -76,7 +76,7 @@ Assumes that the frame is only split into two."
       (split-window-vertically)) ; gives us a split with the other window twice
     (switch-to-buffer nil))) ; restore the original window in this part of the frame
 
-(defhydra my-toggle-hydra (:hint nil :exit t)
+(defhydra my-toggle-hydra (:hint nil :exit t :idle 0.5)
   "
    toggle:  _t_ → truncate lines    _w_ → whitespace    _r_ → rainbow
             _c_ → company           _l_ → linum
@@ -90,7 +90,7 @@ Assumes that the frame is only split into two."
   ("v" toggle-frame-split)
 )
 
-(defhydra my-colemak-hydra (:hint nil :exit t)
+(defhydra my-colemak-hydra (:hint nil :exit t :idle 0.5)
   "
                                                                             Q W F P G J L U Y ; [ ]
                                                                              A R S T D H N E I O '
@@ -99,14 +99,14 @@ Assumes that the frame is only split into two."
 )
 
 
-(defhydra my-org-hydra (:hint nil :exit t)
+(defhydra my-org-hydra (:hint nil :exit t :idle 0.5)
   "
    toggle:  _a_ → agenda
   "
   ("a" org-agenda)
 )
 
-(defhydra my-window-hydra (:hint nil :exit t)
+(defhydra my-window-hydra (:hint nil :exit t :idle 0.5)
   ("p" winner-undo "undo" :color red)
   ("s" window-configuration-to-register "save")
   ("r" jump-to-register "load")
