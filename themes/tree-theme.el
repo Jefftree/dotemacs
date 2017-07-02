@@ -109,7 +109,8 @@
 
 ;;;;; Fonts
        `(font-lock-builtin-face              ((,class (:foreground ,tree-blue-1))))
-       `(font-lock-comment-face              ((,class (:slant italic :foreground ,tree-grey-7))))
+       `(font-lock-comment-face              ((,class (:foreground ,tree-grey-7))))
+       `(font-lock-comment-delimiter-face              ((,class (:foreground ,tree-green-3))))
        `(font-lock-constant-face             ((,class (:foreground ,tree-blue-3))))
        `(font-lock-doc-face                  ((,class (:foreground ,tree-green-5))))
        `(font-lock-function-name-face        ((,class (:foreground ,tree-yellow-3))))
@@ -161,24 +162,6 @@
        `(ido-subdir                          ((,class (:foreground ,tree-fg))))
        `(ido-virtual                         ((,class (:foreground
                                                        ,tree-blue-0))))
-
-;;;;; Ivy
-       `(ivy-current-match                   ((,class (:background ,tree-grey-3))))
-       `(ivy-minibuffer-match-face-1         ((,class (:foreground ,tree-yellow-3))))
-       `(ivy-minibuffer-match-face-2         ((,class (:foreground ,tree-orange-0))))
-       `(ivy-minibuffer-match-face-3         ((,class (:foreground ,tree-blue-1))))
-       `(ivy-minibuffer-match-face-4         ((,class (:foreground ,tree-purple-1))))
-       `(ivy-subdir                          ((,class (:foreground ,tree-green-4))))
-       `(ivy-modified-buffer                 ((,class (:foreground ,tree-red-2))))
-
-;;;;; Jabber
-       `(jabber-activity-personal-face       ((,class (:foreground ,tree-green-6 :weight bold))))
-       `(jabber-activity-face                ((,class (:foreground ,tree-red-3 :weight bold))))
-       `(jabber-roster-user-online           ((,class (:foreground ,tree-blue-0))))
-       `(jabber-roster-user-dnd              ((,class (:foreground ,tree-red-3))))
-       `(jabber-chat-prompt-system           ((,class (:foreground ,tree-green-6))))
-       `(jabber-chat-prompt-local            ((,class (:foreground ,tree-blue-0))))
-       `(jabber-chat-prompt-foreign          ((,class (:foreground ,tree-green-2))))
 
 ;;;;; Lazy highlight
        `(lazy-highlight                      ((,class (:foreground ,tree-red-4 :background nil))))
@@ -313,7 +296,8 @@
        `(minibuffer-prompt                   ((,class (:foreground ,tree-yellow-3))))
 
 ;;;;; Modeline
-       `(mode-line                           ((,class (:foreground ,tree-green-6 :background ,tree-grey-0))))
+       `(mode-line                           ((,class (:foreground ,tree-green-6 :background ,tree-grey-0 :weight bold))))
+   `(mode-line-buffer-id ((,class (:foreground ,tree-yellow-2 :weight bold))))
        `(mode-line-inactive                  ((,class (:foreground ,tree-grey-6 :background ,tree-grey-0))))
        `(powerline-active1 ((,class (:background ,tree-grey-2 :inherit mode-line))))
        `(powerline-active2 ((,class (:background ,tree-grey-0 :inherit mode-line))))
@@ -336,7 +320,7 @@
        `(org-level-4                         ((,class (:foreground ,tree-red-3))))
        `(org-level-5                         ((,class (:foreground ,tree-green-1))))
        `(org-level-6                         ((,class (:foreground ,tree-purple-1))))
-       `(org-link                            ((,class (:foreground ,tree-blue-1))))
+       `(org-link                            ((,class (:foreground ,tree-blue-1 :underline t))))
        `(org-special-keyword                 ((,class (:foreground ,tree-blue-0))))
        `(org-table                           ((,class (:foreground ,tree-orange-0))))
 
