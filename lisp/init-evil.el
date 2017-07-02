@@ -3,9 +3,12 @@
 (evil-mode)
 
 (require-package 'magit)
-(require-package 'evil-magit)
-(require 'evil-magit)
-(define-key evil-normal-state-map (kbd "C-c gs") 'magit-status)
+
+(after 'magit
+  (require-package 'evil-magit)
+  (require 'evil-magit)
+  (add-hook 'git-commit-mode-hook 'evil-insert-state) ; Start commits in insert state
+)
 
 (setq evil-emacs-state-cursor '("cyan" box))
 (setq evil-normal-state-cursor '("green" box))
