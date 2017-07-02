@@ -9,11 +9,12 @@
 
 (setq company-show-numbers t)
 (setq company-minimum-prefix-length 1)
-(provide 'init-company)
 
 (setq company-tooltip-limit 20)
 
 (setq company-global-modes
         '(not eshell-mode org-mode))
 
-(global-company-mode)
+(add-hook 'after-init-hook #'global-company-mode)
+
+(provide 'init-company)

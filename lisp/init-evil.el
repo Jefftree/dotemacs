@@ -29,13 +29,16 @@
 (require 'evil-anzu)
 (setq anzu-cons-mode-line-p nil)
 
-(evil-put-property 'evil-state-properties 'normal :tag " NORMAL ")
-(evil-put-property 'evil-state-properties 'insert :tag " INSERT ")
-(evil-put-property 'evil-state-properties 'visual :tag " VISUAL ")
-(evil-put-property 'evil-state-properties 'motion :tag " MOTION ")
-(evil-put-property 'evil-state-properties 'emacs :tag " EMACS ")
-(evil-put-property 'evil-state-properties 'replace :tag " REPLACE ")
-(evil-put-property 'evil-state-properties 'operator :tag " OPERATOR ")
+(add-hook 'after-init-hook
+  (lambda ()
+    (evil-put-property 'evil-state-properties 'normal :tag " NORMAL ")
+    (evil-put-property 'evil-state-properties 'insert :tag " INSERT ")
+    (evil-put-property 'evil-state-properties 'visual :tag " VISUAL ")
+    (evil-put-property 'evil-state-properties 'motion :tag " MOTION ")
+    (evil-put-property 'evil-state-properties 'emacs :tag " EMACS ")
+    (evil-put-property 'evil-state-properties 'replace :tag " REPLACE ")
+    (evil-put-property 'evil-state-properties 'operator :tag " OPERATOR ")
+))
 
 (evil-set-initial-state 'eshell-mode 'emacs)
 (provide 'init-evil)

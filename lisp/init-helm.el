@@ -1,20 +1,20 @@
 (require-package 'helm)
 (require 'helm-config)
-(helm-mode 1)
+
+(add-hook 'after-init-hook #'helm-mode)
 
 (setq helm-autoresize-min-height 30)
 (setq helm-autoresize-max-height 30)
-(helm-autoresize-mode t)
 
 (setq helm-buffer-max-length 40)
 
 (setq helm-ff-tramp-not-fancy nil)
 
 (require-package 'helm-flx)
-(helm-flx-mode t)
+(after 'helm-mode #'helm-fix-mode)
 
 (require-package 'helm-fuzzier)
-(helm-fuzzier-mode t)
+(after 'helm-mode #'helm-fuzzier-mode)
 
 (require-package 'helm-ag)
 (setq helm-ag-fuzzy-match t)
@@ -35,7 +35,7 @@
 
 ;; Shorten window height and remove the [C-j] blob
 (setq helm-display-header-line nil)
-(set-face-attribute 'helm-source-header nil :height 0.1)
+;; (after 'helm-mode (set-face-attribute 'helm-source-header nil :height 0.1))
 
 (require-package 'projectile)
 
@@ -47,9 +47,12 @@
 (setq projectile-use-git-grep 1)
 (setq projectile-enable-caching t)
 (setq projectile-file-exists-remote-cache nil)
-(projectile-mode)
+
+(add-hook 'after-init-hook #'projectile-mode)
 
 (require-package 'helm-projectile)
-(helm-projectile-on)
+(after 'projectile-mode
+  (helm-projectile-on))
+
 
 (provide 'init-helm)

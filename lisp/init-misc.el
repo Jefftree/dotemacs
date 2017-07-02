@@ -22,4 +22,6 @@
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 (yas-load-directory (concat user-emacs-directory "/snippets"))
 
+(setq bookmark-default-file (concat dotemacs-cache-directory "bookmarks"))
+
 (provide 'init-misc)

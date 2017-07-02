@@ -1,4 +1,5 @@
 (require-package 'exec-path-from-shell)
+(setq exec-path-from-shell-check-startup-files nil)
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
@@ -7,7 +8,7 @@
 (setq recentf-max-menu-items 500)
 (setq recentf-max-saved-items 1000)
 (setq recentf-auto-cleanup 300)
-(recentf-mode 1)
+(add-hook 'after-init-hook #'recentf-mode)
 
 (require 'tramp)
 (setq tramp-default-method "rsync")
@@ -37,10 +38,10 @@
   )
 
 (require-package 'color-identifiers-mode)
-(global-color-identifiers-mode)
+(add-hook 'after-init-hook #'global-color-identifiers-mode)
 
 ; Save window configs (C-c <left>)
-(winner-mode)
+(add-hook 'after-init-hook #'winner-mode)
 
 (require-package 'yaml-mode)
 (require-package 'dumb-jump)

@@ -28,7 +28,7 @@
 (require-package 'spaceline)
 (require 'spaceline-config)
 
-(spaceline-helm-mode)
+(after 'helm-mode (spaceline-helm-mode))
 (setq spaceline-highlight-face-func #'spaceline-highlight-face-evil-state) ; Different highlighting for modes
 (setq powerline-default-separator 'wave)
 (setq ns-use-srgb-colorspace nil) ; Fix powerline inconsistent colors
@@ -53,6 +53,6 @@
 
 (spaceline-spacemacs-theme)
 
-(set-face-attribute 'helm-selection nil :background "darkblue")
+(after 'helm-mode (set-face-attribute 'helm-selection nil :background "darkblue"))
 
 (provide 'init-theme)
