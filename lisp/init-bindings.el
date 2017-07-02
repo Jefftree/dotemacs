@@ -52,6 +52,17 @@
     ("] q" 'next-error)
 )
 
+(defun cry ()
+  (interactive)
+  (message "¯\\_(ツ)_//¯"))
+
+(-define-keys evil-normal-state-map
+    ("h" 'cry)
+    ("j" 'cry)
+    ("k" 'cry)
+    ("l" 'cry)
+)
+
 (-define-keys evil-insert-state-map
   ("C-g" 'evil-normal-state)
   ("C-e" 'evil-end-of-line)
