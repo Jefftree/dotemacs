@@ -5,6 +5,7 @@
 
 (setq helm-autoresize-min-height 30)
 (setq helm-autoresize-max-height 30)
+(setq helm-autoresize-mode nil)
 
 (setq helm-buffer-max-length 40)
 
@@ -24,8 +25,9 @@
 (setq helm-recentf-fuzzy-match t)
 (setq helm-imenu-fuzzy-match t)
 
-; Use same buffer for split
-(setq helm-split-window-in-side-p t)
+; Use other window for splits
+(setq helm-split-window-in-side-p nil)
+(setq helm-split-window-default-side 'other)
 
 (require-package 'helm-swoop)
 (setq helm-swoop-pre-input-function #'ignore)
