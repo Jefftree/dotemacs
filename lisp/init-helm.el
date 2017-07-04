@@ -53,7 +53,7 @@
 (add-hook 'after-init-hook #'projectile-mode)
 
 (require-package 'helm-projectile)
-(after 'projectile-mode
+(after 'projectile
   (helm-projectile-on))
 
 
