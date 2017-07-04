@@ -124,7 +124,7 @@
        `(font-lock-regexp-grouping-backslash ((,class (:foreground ,tree-red-1 :bold t))))
 
 ;;;;; Fringe
-       `(fringe                              ((,class (:foreground ,tree-fg :background ,tree-bg))))
+       `(fringe                              ((,class (:foreground ,tree-fg :background ,tree-grey-2))))
 
 ;;;;; Header
        `(header-line                         ((,class (:foreground ,tree-fg))))
@@ -205,9 +205,10 @@
        `(git-commit-comment-heading          ((,class (:foreground ,tree-yellow-3))))
 
 ;;;;; Git-gutter
-       `(git-gutter-fr+-modified             ((,class (:foreground ,tree-blue-3 :background ,tree-bg))))
-       `(git-gutter-fr+-added                ((,class (:foreground ,tree-green-2 :background ,tree-bg))))
-       `(git-gutter-fr+-deleted              ((,class (:foreground ,tree-red-5 :background ,tree-bg))))
+
+       `(git-gutter-fr:modified              ((,class (:foreground ,tree-yellow-3 :background , tree-bg))))
+       `(git-gutter-fr:added                 ((,class (:foreground ,tree-green-6 :background , tree-bg))))
+       `(git-gutter-fr:deleted               ((,class (:foreground ,tree-red-8 :background , tree-bg))))
 
 ;;;;; Magit
        `(magit-blame-heading                 ((,class (:background ,tree-grey-2 :box ,tree-purple-4 :weight bold :foreground ,tree-fg))))

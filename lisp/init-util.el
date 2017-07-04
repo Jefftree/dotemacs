@@ -30,13 +30,22 @@
 
 (if (display-graphic-p)
     (progn
-      (require-package 'git-gutter-fringe+)
-      (require 'git-gutter-fringe+)
-      (require-package 'git-gutter+)
-      (global-git-gutter+-mode)
-      (fringe-mode 16))
-  )
+      (require-package 'git-gutter-fringe)
+      (require 'git-gutter-fringe)
+      (require-package 'git-gutter)
+      (global-git-gutter-mode)
+    )
+)
 
+  ;; places the git gutter outside the margins.
+  ;; Reference: https://github.com/hlissner/.emacs.d
+(after 'git-gutter-fringe
+      (setq-default fringes-outside-margins t)
+      (defvar line-bitmap [224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224])
+      (defvar deleted-bitmap [0 0 0 0 0 0 0 0 0 0 0 0 0 128 192 224 240 248])
+      (define-fringe-bitmap 'git-gutter-fr:added line-bitmap nil 2 'center)
+      (define-fringe-bitmap 'git-gutter-fr:modified line-bitmap nil 2 'center)
+      (define-fringe-bitmap 'git-gutter-fr:deleted deleted-bitmap nil 2 'center))
 (require-package 'color-identifiers-mode)
 (add-hook 'after-init-hook #'global-color-identifiers-mode)
 
