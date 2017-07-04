@@ -40,6 +40,7 @@
     (", v" (kbd "C-w v C-w l") "vsplit")
     (", s" (kbd "C-w s C-w j") "ssplit")
 
+    ("C-u" 'evil-scroll-up)
     ("j" 'evil-next-visual-line)
     ("k" 'evil-previous-visual-line)
     ("g p" "`[v`]" "evil-goto-paste")
@@ -53,8 +54,10 @@
 )
 
 (defun cry ()
+  "There are better ways to move around!"
   (interactive)
-  (message "¯\\_(ツ)_//¯"))
+  (message "¯\\_(ツ)_//¯")
+ )
 
 (-define-keys evil-normal-state-map
     ("h" 'cry)
@@ -93,14 +96,14 @@
 )
 
 (-define-keys evil-normal-state-map
-  ("SPC <tab>" 'avy-goto-char-2)
+  (", ," 'avy-goto-char-2)
   ("SPC i" 'neotree-toggle))
 
 ;; TODO: Rebind
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cc" 'org-capture)
-(global-set-key "\C-cb" 'org-iswitchb)
+;; (global-set-key "\C-cl" 'org-store-link)
+;; (global-set-key "\C-ca" 'org-agenda)
+;; (global-set-key "\C-cc" 'org-capture)
+;; (global-set-key "\C-cb" 'org-iswitchb)
 
 (define-key global-map (kbd "C-<backspace>") 'keyboard-quit)
 
