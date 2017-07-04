@@ -55,7 +55,48 @@
 (set-face-attribute 'spaceline-evil-replace nil :background "#f92672")
 (set-face-attribute 'spaceline-evil-visual nil :background "#fd971f")
 
-(spaceline-spacemacs-theme)
+(spaceline-install
+    `(
+      ;; Init
+((persp-name
+            workspace-number
+            window-number)
+           :fallback evil-state
+           :face highlight-face
+           :priority 0)
+      (anzu :priority 4)
+      auto-compile
+      ;; Extras
+         '((buffer-modified buffer-size buffer-id remote-host)
+           :priority 1)
 
+      major-mode
+      (process :when active)
+      ((flycheck-error flycheck-warning flycheck-info)
+       :when active
+       :priority 3)
+      (minor-modes :when active)
+      (mu4e-alert-segment :when active)
+      (erc-track :when active)
+      (version-control :when active
+                       :priority 7)
+      (org-pomodoro :when active)
+      (org-clock :when active)
+      nyan-cat)
+    `(which-function
+      (python-pyvenv :fallback python-pyenv)
+      purpose
+      (battery :when active)
+      (selection-info :priority 2)
+      input-method
+      ((buffer-encoding-abbrev
+        point-position
+        line-column)
+       :separator " | "
+       :priority 3)
+      (global :when active)
+      (buffer-position :priority 0)
+      (hud :priority 0)))
 
+(setq-default mode-line-format '("%e" (:eval (spaceline-ml-main))))
 (provide 'init-theme)
