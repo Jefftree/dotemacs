@@ -93,6 +93,7 @@
 )
 
 (-define-keys evil-normal-state-map
+  ("SPC <tab>" 'avy-goto-char-2)
   ("SPC i" 'neotree-toggle))
 
 ;; TODO: Rebind
@@ -100,6 +101,8 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+(define-key global-map (kbd "C-<backspace>") 'keyboard-quit)
 
 (define-key global-map (kbd "C-=") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
