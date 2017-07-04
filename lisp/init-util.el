@@ -32,7 +32,6 @@
     (progn
       (require-package 'git-gutter-fringe)
       (require 'git-gutter-fringe)
-      (require-package 'git-gutter)
       (global-git-gutter-mode)
     )
 )

@@ -55,7 +55,7 @@
 
       (custom-theme-set-variables
         'tree
-        `(linum-format " %3i "))
+        `(nlinum-format "%3i "))
 
       (custom-theme-set-faces
        'tree
@@ -124,7 +124,7 @@
        `(font-lock-regexp-grouping-backslash ((,class (:foreground ,tree-red-1 :bold t))))
 
 ;;;;; Fringe
-       `(fringe                              ((,class (:foreground ,tree-fg :background ,tree-grey-2))))
+       `(fringe                              ((,class (:foreground ,tree-fg :background ,nil))))
 
 ;;;;; Header
        `(header-line                         ((,class (:foreground ,tree-fg))))
@@ -167,7 +167,7 @@
        `(lazy-highlight                      ((,class (:foreground ,tree-red-4 :background nil))))
 
 ;;;;; Linum
-       `(linum                               ((,class (:foreground ,tree-grey-6 :background ,tree-grey-2))))
+       `(linum                               ((,class (:foreground ,tree-grey-6 :background ,nil))))
 
 ;;;;; Ediff
        `(ediff-even-diff-A                   ((,class (:background ,tree-grey-2 :foreground ,tree-fg))))
