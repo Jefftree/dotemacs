@@ -9,6 +9,7 @@
 
 (global-hl-line-mode)
 
+(display-time-mode 1)
 (require-package 'nlinum)
 
 (require-package 'all-the-icons)
