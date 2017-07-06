@@ -25,9 +25,20 @@
 
 (setq mouse-wheel-progressive-speed nil)
 
-;; Backup
-(setq backup-directory-alist `(("." . "~/.emacs.d/saves")))
+;; multiple-backups
+;; WIP
+(setq backup-directory-alist `((".*" . ,(expand-file-name (concat dotemacs-cache-directory "backups/")))))
 (setq backup-by-copying t)
+(setq version-control t)
+(setq kept-old-versions 0)
+(setq kept-new-versions 20)
+(setq delete-old-versions t)
+
+;; move auto-save to the cache
+;; WIP
+(let ((dir (expand-file-name (concat dotemacs-cache-directory "auto-save/"))))
+  (setq auto-save-list-file-prefix (concat dir "saves-"))
+  (setq auto-save-file-name-transforms `((".*" ,(concat dir "save-") t))))
 
 ;; Disable tab indentation
 (setq-default indent-tabs-mode nil)
