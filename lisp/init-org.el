@@ -12,4 +12,11 @@
 (setq org-default-notes-file (concat user-emacs-directory "notes.org"))
 (setq org-log-done 'time) ;; Add timestamp when tasks are DONE
 
+(setq org-agenda-span 7)
+
+(after 'org
+  (org-agenda-log-mode 1)
+  (add-to-list 'org-modules 'org-habit)
+)
+
 (provide 'init-org)
