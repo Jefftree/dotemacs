@@ -9,6 +9,10 @@
 
 (global-hl-line-mode)
 
+(setq display-time-string-forms
+       '((propertize (concat " " 12-hours ":" minutes " " (upcase am-pm))
+ 		    'face 'egoge-display-time)))
+
 (display-time-mode 1)
 (require-package 'nlinum)
 
