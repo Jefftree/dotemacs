@@ -15,8 +15,11 @@
 (setq org-agenda-span 7)
 
 (after 'org
-  (org-agenda-log-mode 1)
   (add-to-list 'org-modules 'org-habit)
+)
+
+(after 'org-agenda
+  (org-agenda-log-mode 1)
 )
 
 (provide 'init-org)
