@@ -43,6 +43,9 @@
 ;; Disable tab indentation
 (setq-default indent-tabs-mode nil)
 
+;; Sentences end with single space
+(setq sentence-end-double-space nil)
+
 ;; Remove trailing whitespace before save.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
