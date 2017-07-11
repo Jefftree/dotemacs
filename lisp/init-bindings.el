@@ -96,7 +96,8 @@
 )
 
 (-define-keys evil-normal-state-map
-  (", ," 'avy-goto-char-2)
+  (", ," 'avy-goto-word-2)
+  (", ." 'avy-goto-char-2)
   ("SPC i" 'neotree-toggle))
 
 ;; TODO: Rebind

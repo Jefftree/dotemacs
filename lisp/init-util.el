@@ -56,5 +56,36 @@
 (setq dumb-jump-selector 'helm)
 
 (require-package 'avy)
+(defun avy-goto-word-2 (char1 char2 &optional arg beg end symbol)
+  "Jump to the currently visible CHAR1 at a word starting with CHAR1 CHAR2.
+The window scope is determined by `avy-all-windows' (ARG negates it)."
+  (interactive (list (read-char "char 1: " t)
+                     (read-char "char 2: " t)
+                     current-prefix-arg))
+  (avy-with avy-goto-word-2
+    (let* ((str1 (string char1))
+           (str2 (string char2))
+           (regex1 (cond ((string= str1 ".")
+                         "\\.")
+                        ((and avy-word-punc-regexp
+                              (string-match avy-word-punc-regexp str1))
+                         (regexp-quote str1))
+                        ((<= char1 26)
+                         str1)
+                        (t
+                         (concat
+                          (if symbol "\\_<" "\\b")
+                          str1))))
+           (regex2 (cond ((string= str2 ".")
+                         "\\.")
+                        ((and avy-word-punc-regexp
+                              (string-match avy-word-punc-regexp str2))
+                         (regexp-quote str2))
+                        ((<= char2 26)
+                         str2)
+                        (t
+                         str2)))
+           (regex (concat regex1 regex2)))
+      (avy--generic-jump regex arg avy-style beg end))))
 
 (provide 'init-util)
