@@ -18,7 +18,7 @@
   (add-to-list 'org-modules 'org-habit)
 )
 
-(after 'org-agenda
+(after 'org-agenda-mode
   (org-agenda-log-mode 1)
 )
 
