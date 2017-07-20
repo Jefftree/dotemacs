@@ -8,6 +8,8 @@
     (progn
       (require-package 'git-gutter-fringe)
       (require 'git-gutter-fringe)
+      (require-package 'git-gutter)
+      (require 'git-gutter)
       (global-git-gutter-mode)
     )
 )

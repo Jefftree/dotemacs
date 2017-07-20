@@ -18,10 +18,10 @@
   ("p" magit-push-popup)
   ("r" magit-pull-popup)
 
-  ("a" git-gutter-stage-hunks)
-  ("r" git-gutter-revert-hunk)
-  ("A" git-gutter-stage-whole-buffer)
-  ("R" git-gutter-unstage-whole-buffer)
+  ("a" git-gutter:stage-hunks)
+  ("r" git-gutter:revert-hunk)
+  ("A" git-gutter:stage-whole-buffer)
+  ("R" git-gutter:unstage-whole-buffer)
 )
 
 

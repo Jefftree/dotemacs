@@ -315,6 +315,7 @@
        `(org-document-title                  ((,class (:foreground ,tree-red-9))))
        `(org-todo                            ((,class (:foreground ,tree-red-3 :weight bold))))
        `(org-done                            ((,class (:foreground ,tree-green-6))))
+       `(org-headline-done                   ((,class (:foreground ,tree-grey-7))))
        `(org-level-1                         ((,class (:foreground ,tree-orange-0 :weight bold))))
        `(org-level-2                         ((,class (:foreground ,tree-blue-2))))
        `(org-level-3                         ((,class (:foreground ,tree-yellow-2))))
