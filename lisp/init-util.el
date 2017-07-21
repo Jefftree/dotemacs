@@ -34,6 +34,7 @@
 (setq dumb-jump-selector 'helm)
 
 (require-package 'avy)
+(require 'avy)
 (defun avy-goto-word-2 (char1 char2 &optional arg beg end symbol)
   "Jump to the currently visible CHAR1 at a word starting with CHAR1 CHAR2.
 The window scope is determined by `avy-all-windows' (ARG negates it)."
