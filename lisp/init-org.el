@@ -13,6 +13,14 @@
 (setq org-log-done 'time) ;; Add timestamp when tasks are DONE
 
 (setq org-agenda-span 7)
+(setq org-agenda-custom-commands
+      '(("n" "Actionable Items" todo "NEXT")
+        ("W" "Weekly Review"
+         ((agenda "" ((org-agenda-ndays 7))) ;; WIP
+          (tags "LEVEL=2"
+                )
+          (todo "BLOCKED"))) ;; review blocked items
+      ))
 
 (after 'org
   (add-to-list 'org-modules 'org-habit)
@@ -21,5 +29,28 @@
 (after 'org-agenda-mode
   (org-agenda-log-mode 1)
 )
+
+(setq org-todo-keyword-faces
+      (quote (("TODO" :foreground "#fc644d" :weight bold)
+              ("NEXT" :foreground "#2dfffe" :weight bold)
+              ("DONE" :foreground "#a8ff60" :weight bold)
+              ("BLOCKED" :foreground "#a40073" :weight bold)
+              ("CANCELLED" :foreground "#29fd2d" :weight bold)
+              )))
+
+(setq org-agenda-files '("~/Sync/workspace/assay/inbox.org"
+                         "~/Sync/workspace/assay/todo.org"
+                         "~/Sync/workspace/assay/tickler.org"))
+
+(setq org-refile-targets '(("~/Sync/workspace/assay/todo.org" :maxlevel . 2)
+                           ("~/Sync/workspace/assay/tickler.org" :maxlevel . 1)
+                           ("~/Sync/workspace/assay/backlog.org" :maxlevel . 1)))
+
+(setq org-capture-templates '(("c" "Inbox" entry
+                               (file+headline "~/Sync/workspace/assay/inbox.org" "Tasks")
+                               "* TODO %i%?")
+                              ("t" "Tickler" entry
+                               (file+headline "~/Sync/workspace/assay/tickler.org" "Tickler")
+                               "* %i%? \nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+1d\"))")))
 
 (provide 'init-org)

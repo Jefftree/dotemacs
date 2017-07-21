@@ -5,10 +5,10 @@
 (require-package 'magit)
 
 (after 'magit
-  (require-package 'evil-magit)
-  (require 'evil-magit)
   (add-hook 'git-commit-mode-hook 'evil-insert-state) ; Start commits in insert state
 )
+
+(add-hook 'org-capture-mode-hook 'evil-insert-state) ; Org capture start in insert state
 
 (setq evil-emacs-state-cursor '("cyan" box))
 (setq evil-normal-state-cursor '("green" box))

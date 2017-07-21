@@ -98,12 +98,27 @@ Assumes that the frame is only split into two."
   "
 )
 
+(defun jefftree--open-todo nil
+  (interactive)
+  (find-file "~/Sync/workspace/assay/todo.org")
+)
+
+(defun jefftree--open-inbox nil
+  (interactive)
+  (find-file "~/Sync/workspace/assay/inbox.org")
+)
+
+(defun jefftree--open-notes nil
+  (interactive)
+  (find-file "~/Sync/workspace/assay/global.org")
+)
 
 (defhydra my-org-hydra (:hint nil :exit t :idle 0.5)
-  "
-   toggle:  _a_ → agenda
-  "
-  ("a" org-agenda)
+  ("a" org-agenda "agenda")
+  ("c" org-capture "capture")
+  ("t" jefftree--open-todo "todo")
+  ("s" jefftree--open-inbox "inbox")
+  ("n" jefftree--open-notes "notes")
 )
 
 (defhydra my-window-hydra (:hint nil :exit t :idle 0.5)
