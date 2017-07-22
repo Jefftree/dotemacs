@@ -126,6 +126,10 @@ Assumes that the frame is only split into two."
   ("s" window-configuration-to-register "save")
   ("r" jump-to-register "load")
   ("n" winner-redo "redo")
+  ("+" evil-window-increase-height "+" :color red)
+  ("-" evil-window-decrease-height "-" :color red)
+  (">" evil-window-increase-width ">" :color red)
+  ("<" evil-window-decrease-width "<" :color red)
 )
 
 (provide 'init-hydra)
