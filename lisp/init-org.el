@@ -29,6 +29,11 @@
 (after 'org-agenda-mode
   (org-agenda-log-mode 1)
 )
+(setq org-goto-interface 'outline-path-completion
+      org-goto-max-level 10) ;; Speedy jumping
+(setq org-outline-path-complete-in-steps nil) ;; Skip tree style navigation
+
+(advice-add 'org-refile :after 'org-save-all-org-buffers) ;; Auto save after refile
 
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "#fc644d" :weight bold)
