@@ -35,12 +35,11 @@
 
 (-define-keys evil-normal-state-map
     ("Y" "y$")
-    (", w" 'save-buffer)
-    (", x" 'evil-save-modified-and-close)
-    (", v" (kbd "C-w v C-w l") "vsplit")
-    (", s" (kbd "C-w s C-w j") "ssplit")
+    ("C-c w" 'save-buffer)
+    ("C-c x" 'evil-save-modified-and-close)
+    ("C-c v" (kbd "C-w v C-w l") "vsplit")
+    ("C-c s" (kbd "C-w s C-w j") "ssplit")
 
-    ("C-u" 'evil-scroll-up)
     ("j" 'evil-next-visual-line)
     ("k" 'evil-previous-visual-line)
     ("g p" "`[v`]" "evil-goto-paste")
@@ -95,6 +94,16 @@
   ("SPC Q" (lambda () (interactive) (restart-emacs '("--debug-init"))))
 )
 
+;; Rules are meant to be broken
+;; Partially restore up/down navigation in Colemak
+(-define-keys evil-normal-state-map
+  ("k" 'evil-search-next)
+  ("K" 'evil-search-previous)
+  ("n" 'evil-next-visual-line)
+  ("e" 'evil-previous-visual-line)
+  ("j" 'evil-forward-word-end)
+)
+
 (-define-keys evil-normal-state-map
   (", ," 'avy-goto-word-2)
   (", ." 'avy-goto-char-2)
@@ -121,5 +130,15 @@
         (local-set-key (kbd "M-j") #'evil-window-down)
         (local-set-key (kbd "M-k") #'evil-window-up)
         (local-set-key (kbd "M-l") #'evil-window-right)))
+
+(defun simulate-key-press (key)
+  "Pretend that KEY was pressed.
+KEY must be given in `kbd' notation."
+  `(lambda ()
+     (interactive)
+     (setq prefix-arg current-prefix-arg)
+     (setq unread-command-events (listify-key-sequence (read-kbd-macro ,key)))))
+
+(define-key evil-normal-state-map (kbd ",") (simulate-key-press "C-c"))
 
 (provide 'init-bindings)
