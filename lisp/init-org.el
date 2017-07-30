@@ -58,4 +58,16 @@
                                (file+headline "~/Sync/workspace/assay/tickler.org" "Tickler")
                                "* %i%? \nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+1d\"))")))
 
+;; Evaluating Python Code Blocks in org
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)
+   ))
+
+(setq org-tag-alist '(("@work" . ?w)
+                      ("@home" . ?h)
+                      ("laptop" . ?l)
+                      ("internet", ?i)
+                      ("phone", ?p)))
+
 (provide 'init-org)
