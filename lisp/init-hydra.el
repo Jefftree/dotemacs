@@ -90,12 +90,8 @@ Assumes that the frame is only split into two."
   ("v" toggle-frame-split)
 )
 
-(defhydra my-colemak-hydra (:hint nil :exit t :idle 0.5)
-  "
-                                                                            Q W F P G J L U Y ; [ ]
-                                                                             A R S T D H N E I O '
-                                                                              Z X C V B K M , . /
-  "
+(defhydra my-buffer-hydra (:exit t :idle 0.5)
+  ("k" kill-buffer "kill buffer")
 )
 
 (defun jefftree--open-todo nil

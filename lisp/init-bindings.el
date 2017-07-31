@@ -83,6 +83,7 @@
   ("SPC f" 'my-helm-hydra/body)
   ("SPC w" 'my-window-hydra/body)
   ("SPC a" 'my-org-hydra/body)
+  ("SPC b" 'my-buffer-hydra/body)
   ("SPC t" 'my-toggle-hydra/body)
   ("SPC j" 'my-jump-hydra/body)
   ("SPC g" 'my-git-hydra/body)
@@ -108,12 +109,6 @@
   (", ," 'avy-goto-word-2)
   (", ." 'avy-goto-char-2)
   ("SPC i" 'neotree-toggle))
-
-;; TODO: Rebind
-;; (global-set-key "\C-cl" 'org-store-link)
-;; (global-set-key "\C-ca" 'org-agenda)
-;; (global-set-key "\C-cc" 'org-capture)
-;; (global-set-key "\C-cb" 'org-iswitchb)
 
 (define-key global-map (kbd "C-<backspace>") 'keyboard-quit)
 
