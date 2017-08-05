@@ -62,6 +62,7 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((python . t)
+   (C . t)
    ))
 
 (setq org-tag-alist '(("@work" . ?w)
