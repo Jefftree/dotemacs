@@ -37,6 +37,7 @@
     ("Y" "y$")
     ("C-c w" 'save-buffer)
     ("C-c x" 'evil-save-modified-and-close)
+    ("C-c X" 'kill-buffer)
     ("C-c v" (kbd "C-w v C-w l") "vsplit")
     ("C-c s" (kbd "C-w s C-w j") "ssplit")
 
@@ -106,9 +107,15 @@
 )
 
 (-define-keys evil-normal-state-map
-  (", ," 'avy-goto-word-2)
-  (", ." 'avy-goto-char-2)
+  ("C-c ," 'avy-goto-word-2)
+  ("C-c ." 'avy-goto-char-2)
   ("SPC i" 'neotree-toggle))
+
+(-define-keys evil-motion-state-map
+  ("k" 'evil-search-next)
+  ("K" 'evil-search-previous)
+  ("n" 'evil-next-line)
+  ("e" 'evil-previous-line))
 
 (define-key global-map (kbd "C-<backspace>") 'keyboard-quit)
 
