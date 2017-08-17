@@ -44,13 +44,13 @@
 
 (defhydra my-helm-hydra (:hint nil :exit t :idle 0.5)
   "
-   search:   _a_ → apropos   _y_ → kill-ring   _s_ → ag
+   search:   _h_ → apropos   _y_ → kill-ring   _s_ → ag
              _e_ → mini      _p_ → projectile  _f_ → pf
              _d_ → imenu     _o_ → switch      _l_ → files
              _v_ → resume
 
   "
-  ("a" helm-apropos)
+  ("h" helm-apropos)
   ("i" switch-to-projects)
   ("s" helm-projectile-ag)
   ("e" helm-mini)
