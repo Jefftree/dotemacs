@@ -4,6 +4,9 @@
 
 (setq js-indent-level 2) ; Javscript indentation: 2
 
+(setq python-shell-interpreter "ipython"
+    python-shell-interpreter-args "--simple-prompt -i")
+
 (require-package 'neotree)
 (require 'neotree)
 
