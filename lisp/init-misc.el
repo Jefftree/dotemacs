@@ -7,6 +7,9 @@
 (setq python-shell-interpreter "ipython"
     python-shell-interpreter-args "--simple-prompt -i")
 
+;; Highlight latex math
+(setq org-highlight-latex-and-related '(latex script entities))
+
 (require-package 'neotree)
 (require 'neotree)
 
