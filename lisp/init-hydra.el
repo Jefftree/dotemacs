@@ -109,8 +109,29 @@ Assumes that the frame is only split into two."
   (find-file "~/Sync/workspace/assay/global.org")
 )
 
+(defun jefftree/config/open-init nil
+  (interactive)
+  (find-file "~/.emacs.d/init.el")
+)
+
+(defun org-sparse-next nil
+  (interactive)
+  (org-show-todo-tree 3)
+)
+
+(defun jefftree/config/ff nil
+  (interactive)
+  (helm-projectile-find-file (expand-file-name "~/.emacs.d"))
+)
+
+(defhydra my-config-hydra (:hint nil :exit t :idle 0.5)
+  ("a" jefftree/config/open-init "init")
+  ("v" jefftree/config/ff "ff")
+)
+
 (defhydra my-org-hydra (:hint nil :exit t :idle 0.5)
   ("a" org-agenda "agenda")
+  ("q" org-sparse-next "next")
   ("c" org-capture "capture")
   ("t" jefftree--open-todo "todo")
   ("s" jefftree--open-inbox "inbox")
