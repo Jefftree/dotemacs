@@ -25,6 +25,7 @@
 (after 'org
   (add-to-list 'org-modules 'org-habit)
 )
+(setq org-list-allow-alphabetical 1)
 
 (after 'org-agenda-mode
   (org-agenda-log-mode 1)

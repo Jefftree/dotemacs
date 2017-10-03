@@ -16,6 +16,7 @@
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 (require-package 'restart-emacs)
+(require-package 'lua-mode)
 
 (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-enter)
