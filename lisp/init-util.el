@@ -29,7 +29,14 @@
 ; Save window configs (C-c <left>)
 (add-hook 'after-init-hook #'winner-mode)
 
-(require-package 'yaml-mode)
+(require-package 'yasnippet)
+
+(require 'yasnippet)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+(add-hook 'org-mode-hook #'yas-minor-mode)
+(yas-load-directory (concat user-emacs-directory "/snippets"))
+
+
 (require-package 'dumb-jump)
 (setq dumb-jump-selector 'helm)
 

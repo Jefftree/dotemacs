@@ -68,6 +68,9 @@
 ;; Disable tab indentation
 (setq-default indent-tabs-mode nil)
 
+;; Save bookmarks as cache
+(setq bookmark-default-file (concat dotemacs-cache-directory "bookmarks"))
+
 ;; Sentences end with single space
 (setq sentence-end-double-space nil)
 
