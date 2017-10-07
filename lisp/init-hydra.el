@@ -99,6 +99,11 @@ Assumes that the frame is only split into two."
   (find-file "~/Sync/workspace/assay/todo.org")
 )
 
+(defun jefftree--open-tickler nil
+  (interactive)
+  (find-file "~/Sync/workspace/assay/tickler.org")
+)
+
 (defun jefftree--open-inbox nil
   (interactive)
   (find-file "~/Sync/workspace/assay/inbox.org")
@@ -107,6 +112,11 @@ Assumes that the frame is only split into two."
 (defun jefftree--open-notes nil
   (interactive)
   (find-file "~/Sync/workspace/assay/global.org")
+)
+
+(defun jefftree--open-backlog nil
+  (interactive)
+  (find-file "~/Sync/workspace/assay/backlog.org")
 )
 
 (defun jefftree/config/open-init nil
@@ -126,7 +136,7 @@ Assumes that the frame is only split into two."
 
 (defhydra my-config-hydra (:hint nil :exit t :idle 0.5)
   ("a" jefftree/config/open-init "init")
-  ("v" jefftree/config/ff "ff")
+  ("f" jefftree/config/ff "ff")
 )
 
 (defhydra my-org-hydra (:hint nil :exit t :idle 0.5)
@@ -134,7 +144,9 @@ Assumes that the frame is only split into two."
   ("q" org-sparse-next "next")
   ("c" org-capture "capture")
   ("t" jefftree--open-todo "todo")
-  ("s" jefftree--open-inbox "inbox")
+  ("r" jefftree--open-tickler "tickler")
+  ("b" jefftree--open-backlog "backlog")
+  ("i" jefftree--open-inbox "inbox")
   ("n" jefftree--open-notes "notes")
 )
 
