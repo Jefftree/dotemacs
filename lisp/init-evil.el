@@ -10,6 +10,7 @@
 
 (add-hook 'org-capture-mode-hook 'evil-insert-state) ; Org capture start in insert state
 
+
 (setq evil-emacs-state-cursor '("cyan" box))
 (setq evil-normal-state-cursor '("green" box))
 (setq evil-visual-state-cursor '("orange" box))
@@ -41,4 +42,5 @@
 ))
 
 (evil-set-initial-state 'eshell-mode 'emacs)
+(evil-set-initial-state 'inferior-python-mode 'emacs)
 (provide 'init-evil)
