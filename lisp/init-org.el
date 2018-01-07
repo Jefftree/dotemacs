@@ -17,8 +17,21 @@
       '(("n" "Actionable Items" todo "NEXT")
         ("W" "Weekly Review"
          ((agenda "" ((org-agenda-ndays 7))) ;; WIP
-          (tags "LEVEL=2"
+          (tags "+CLOSED>\"<-7d>\""
+                ((org-agenda-overriding-header "Completed Last Week"))
                 )
+          (tags "LEVEL=3+TODO=\"NEXT\""
+                ((org-agenda-overriding-header "Next Tasks"))
+                ) ;;brap
+          (tags "LEVEL=3+TODO=\"TODO\""
+                ((org-agenda-overriding-header "High-priority unfinished tasks:"))
+                )
+          (tags "LEVEL=2+TODO=\"TODO\"" ((org-agenda-files '("~/Sync/workspace/assay/inbox.org"))
+                                        (org-agenda-overriding-header "Inbox")
+                                         ))
+          (tags "LEVEL=3+TODO=\"TODO\"" ((org-agenda-files '("~/Sync/workspace/assay/backlog.org"))
+                                        (org-agenda-overriding-header "Backlog")
+                                         ))
           (todo "BLOCKED"))) ;; review blocked items
       ))
 
