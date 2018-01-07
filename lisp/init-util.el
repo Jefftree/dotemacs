@@ -23,19 +23,12 @@
       (define-fringe-bitmap 'git-gutter-fr:added line-bitmap nil 2 'center)
       (define-fringe-bitmap 'git-gutter-fr:modified line-bitmap nil 2 'center)
       (define-fringe-bitmap 'git-gutter-fr:deleted deleted-bitmap nil 2 'center))
+
 (require-package 'color-identifiers-mode)
 (add-hook 'after-init-hook #'global-color-identifiers-mode)
 
 ; Save window configs (C-c <left>)
 (add-hook 'after-init-hook #'winner-mode)
-
-(require-package 'yasnippet)
-
-(require 'yasnippet)
-(add-hook 'prog-mode-hook #'yas-minor-mode)
-(add-hook 'org-mode-hook #'yas-minor-mode)
-(yas-load-directory (concat user-emacs-directory "/snippets"))
-
 
 (require-package 'dumb-jump)
 (setq dumb-jump-selector 'helm)

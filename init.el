@@ -43,6 +43,7 @@
 (require 'init-core)
 (require 'init-evil)
 (require 'init-helm)
+(require 'init-yasnippet)
 (require 'init-company)
 (require 'init-theme)
 (require 'init-flycheck)
