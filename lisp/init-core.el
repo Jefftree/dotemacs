@@ -4,6 +4,10 @@
 
 (setq-default indent-tabs-mode nil)
 (setq tab-width 4)
+(setq-default tab-width 4)
+(defun my-c++-indent-setup ()
+  (setq c-basic-offset 4)
+  (setq indent-tabs-mode nil))
 
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))

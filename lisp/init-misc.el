@@ -11,6 +11,9 @@
 ;; Highlight latex math
 (setq org-highlight-latex-and-related '(latex script entities))
 
+;; lua tabs
+(setq lua-indent-level 2)
+
 (require-package 'neotree)
 (require 'neotree)
 
