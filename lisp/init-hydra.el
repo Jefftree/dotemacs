@@ -92,6 +92,8 @@ Assumes that the frame is only split into two."
 
 (defhydra my-buffer-hydra (:exit t :idle 0.5)
   ("k" kill-buffer "kill buffer")
+  ("p" switch-to-prev-buffer "prev buffer" :color red)
+  ("n" switch-to-next-buffer "next buffer" :color red)
 )
 
 (defun jefftree--open-todo nil
@@ -148,6 +150,7 @@ Assumes that the frame is only split into two."
   ("b" jefftree--open-backlog "backlog")
   ("i" jefftree--open-inbox "inbox")
   ("n" jefftree--open-notes "notes")
+  ("s" (lambda () (interactive) (switch-to-buffer "*scratch*")) "scratch")
 )
 
 (defhydra my-window-hydra (:hint nil :exit t :idle 0.5)
