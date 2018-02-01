@@ -67,4 +67,9 @@ The window scope is determined by `avy-all-windows' (ARG negates it)."
            (regex (concat regex1 regex2)))
       (avy--generic-jump regex arg avy-style beg end))))
 
+
+
+(require-package 'ein)
+(require 'ein)
+
 (provide 'init-util)

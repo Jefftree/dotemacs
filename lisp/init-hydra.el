@@ -164,4 +164,16 @@ Assumes that the frame is only split into two."
   ("<" evil-window-decrease-width "<" :color red)
 )
 
+(defun connect-to-localhost nil
+  (interactive)
+  (ein:notebooklist-open "localhost:8888")
+)
+
+(defhydra my-notebook-hydra (:hint nil :exit t :idle 0.5)
+  ("c" connect-to-localhost "notebook-open")
+)
+
+
+
+
 (provide 'init-hydra)

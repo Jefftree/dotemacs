@@ -91,6 +91,7 @@
   ("SPC g" 'my-git-hydra/body)
   ("SPC c" 'my-colemak-hydra/body)
   ("SPC e" 'eshell)
+  ("SPC n" 'my-notebook-hydra/body)
   ("SPC r" 'eval-buffer)
   ("SPC k" 'helm-colors)
   ("SPC SPC" 'helm-M-x)
