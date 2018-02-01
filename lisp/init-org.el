@@ -47,7 +47,10 @@
       org-goto-max-level 10) ;; Speedy jumping
 (setq org-outline-path-complete-in-steps nil) ;; Skip tree style navigation
 
-(advice-add 'org-refile :after 'org-save-all-org-buffers) ;; Auto save after refile
+;; Auto save after refile
+(advice-add 'org-refile :after
+        (lambda (&rest _)
+        (org-save-all-org-buffers)))
 
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "#fc644d" :weight bold)
