@@ -2,8 +2,11 @@
 (require-package 'company-jedi)
 
 (require 'company)
-(add-to-list 'company-backends 'company-jedi)
 
+(defun my/python-mode-hook ()
+  (add-to-list 'company-backends 'company-jedi))
+
+(add-hook 'python-mode-hook 'my/python-mode-hook)
 
 (setq company-idle-delay 0)
 
