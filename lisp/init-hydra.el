@@ -90,10 +90,19 @@ Assumes that the frame is only split into two."
   ("v" toggle-frame-split)
 )
 
+(defun jefftree--kill-this-buffer nil
+  (interactive)
+  (kill-buffer (current-buffer))
+)
+
 (defhydra my-buffer-hydra (:exit t :idle 0.5)
-  ("k" kill-buffer "kill buffer")
+  ("k" jefftree--kill-this-buffer "kill buffer")
   ("p" switch-to-prev-buffer "prev buffer" :color red)
   ("n" switch-to-next-buffer "next buffer" :color red)
+)
+
+(defhydra my-peace-hydra (:exit t :idle 0.5)
+  ("q" jefftree--kill-this-buffer "kill buffer")
 )
 
 (defun jefftree--open-todo nil
