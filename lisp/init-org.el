@@ -1,7 +1,7 @@
 (setq org-ellipsis " …") ;; Shorter ellipses
 
 (setq org-todo-keywords
-        '((sequence "TODO(t)" "BLOCKED(b)" "NEXT(n)"
+        '((sequence "TODO(t)" "BLOCKED(b)" "READY(r)" "NEXT(n)"
                     "|" "CANCELLED(c)" "DONE(x)")))
 
 (setq org-adapt-indentation nil) ;; Prevent newline from indenting to bullet
@@ -40,6 +40,8 @@
 )
 (setq org-list-allow-alphabetical 1)
 
+;; (setq org-blank-before-new-entry '((heading always) (plain-list-item nil)))
+
 (after 'org-agenda-mode
   (org-agenda-log-mode 1)
 )
@@ -54,6 +56,7 @@
 
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "#fc644d" :weight bold)
+              ("READY" :foreground "#bb5aff" :weight bold)
               ("NEXT" :foreground "#2dfffe" :weight bold)
               ("DONE" :foreground "#a8ff60" :weight bold)
               ("BLOCKED" :foreground "#a40073" :weight bold)
