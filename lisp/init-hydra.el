@@ -182,7 +182,13 @@ Assumes that the frame is only split into two."
   ("c" connect-to-localhost "notebook-open")
 )
 
-
+(defhydra my-colemak-hydra (:hint nil :exit t :idle 0.5)
+  "
+                                                                            Q W F P G J L U Y ; [ ]
+                                                                             A R S T D H N E I O '
+                                                                              Z X C V B K M , . /
+  "
+)
 
 
 (provide 'init-hydra)
