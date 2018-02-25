@@ -29,7 +29,7 @@
           (tags "LEVEL=2+TODO=\"TODO\"" ((org-agenda-files '("~/Sync/self/assay/inbox.org"))
                                         (org-agenda-overriding-header "Inbox")
                                          ))
-          (tags "LEVEL=3+TODO=\"TODO\"" ((org-agenda-files '("~/Sync/self/assay/backlog.org"))
+          (tags "LEVEL=3+TODO=\"NEXT\"" ((org-agenda-files '("~/Sync/self/assay/backlog.org"))
                                         (org-agenda-overriding-header "Backlog")
                                          ))
           (todo "BLOCKED"))) ;; review blocked items
