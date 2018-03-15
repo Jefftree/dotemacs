@@ -33,7 +33,10 @@
   ("i" helm-semantic-or-imenu)
   ("k" helm-swoop)
   ("l" helm-multi-swoop-all)
-  ("d" dumb-jump-go)
+  ("t" dumb-jump-go)
+  ("p" dumb-jump-quick-look)
+  ("o" dumb-jump-go-other-window)
+  ("b" dumb-jump-back)
   ("c" avy-goto-char)
 )
 

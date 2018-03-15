@@ -88,7 +88,7 @@
   ("SPC o" 'my-org-hydra/body)
   ("SPC b" 'my-buffer-hydra/body)
   ("SPC t" 'my-toggle-hydra/body)
-  ("SPC j" 'my-jump-hydra/body)
+  ("SPC s" 'my-jump-hydra/body)
   ("SPC g" 'my-git-hydra/body)
   ("SPC c" 'my-colemak-hydra/body)
   ("SPC e" 'eshell)
