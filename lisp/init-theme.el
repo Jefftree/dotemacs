@@ -42,7 +42,9 @@
 (setq powerline-default-separator 'wave)
 (setq ns-use-srgb-colorspace nil) ; Fix powerline inconsistent colors
 
-; WIP, prefer vsplit over hsplit
+;; Prefer vsplit to hsplit if there is 1 window
+;; If already in a side by side vsplit, use other split for things like magit, python, helm, etc
+;; 180 seems to be a magic number that works both for laptop screens and large monitors
 (setq split-width-threshold 180)
 (setq split-height-threshold nil)
 
