@@ -72,4 +72,8 @@ The window scope is determined by `avy-all-windows' (ARG negates it)."
 (require-package 'ein)
 (require 'ein)
 
+(require-package 'autopair)
+(require 'autopair)
+(autopair-global-mode)
+
 (provide 'init-util)
