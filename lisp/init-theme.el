@@ -43,7 +43,7 @@
 (setq ns-use-srgb-colorspace nil) ; Fix powerline inconsistent colors
 
 ; WIP, prefer vsplit over hsplit
-(setq split-width-threshold 160)
+(setq split-width-threshold 180)
 (setq split-height-threshold nil)
 
 (spaceline-toggle-minor-modes-off) ; Saves diminish
