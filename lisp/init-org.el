@@ -63,6 +63,14 @@
               ("CANCELLED" :foreground "#29fd2d" :weight bold)
               )))
 
+(setq org-tag-faces
+      (quote (("@work" :foreground "#fc644d" :weight bold)
+              ("@home" :foreground "#bb5aff" :weight bold)
+              ("@internet" :foreground "Orange" :weight bold)
+              ("@focused" :foreground "#385afe" :weight bold)
+              ("@phone" :foreground "SpringGreen1" :weight bold)
+              )))
+
 (setq org-agenda-files '("~/Sync/self/assay/inbox.org"
                          "~/Sync/self/assay/todo.org"
                          "~/Sync/self/assay/tickler.org"))
@@ -87,8 +95,10 @@
 
 (setq org-tag-alist '(("@work" . ?w)
                       ("@home" . ?h)
-                      ("laptop" . ?l)
-                      ("internet", ?i)
-                      ("phone", ?p)))
+                      ("@internet", ?i)
+                      ("@focused", ?f)
+                      ("@phone", ?p)))
+
+(setq org-fast-tag-selection-single-key 1)
 
 (provide 'init-org)
