@@ -319,7 +319,7 @@
        `(org-level-1                         ((,class (:foreground ,tree-orange-0 :weight bold))))
        `(org-level-2                         ((,class (:foreground ,tree-blue-2))))
        `(org-level-3                         ((,class (:foreground ,tree-yellow-2))))
-       `(org-level-4                         ((,class (:foreground ,tree-red-3))))
+       `(org-level-4                         ((,class (:foreground ,tree-green-1))))
        `(org-level-5                         ((,class (:foreground ,tree-green-1))))
        `(org-level-6                         ((,class (:foreground ,tree-purple-1))))
        `(org-link                            ((,class (:foreground ,tree-blue-1 :underline t))))
