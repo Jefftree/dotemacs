@@ -20,7 +20,7 @@
           (tags "+CLOSED>\"<-7d>\""
                 ((org-agenda-overriding-header "Completed Last Week"))
                 )
-          (tags "LEVEL=3+TODO=\"NEXT\""
+          (tags "LEVEL<=4+TODO=\"NEXT\""
                 ((org-agenda-overriding-header "Next Tasks"))
                 ) ;;brap
           (tags "LEVEL=3+TODO=\"TODO\""
@@ -101,4 +101,6 @@
 
 (setq org-fast-tag-selection-single-key 1)
 
+(setq org-enforce-todo-dependencies t)
+(setq org-agenda-dim-blocked-tasks 'invisible)
 (provide 'init-org)
