@@ -3,10 +3,10 @@
 
 (require 'company)
 
-(defun my/python-mode-hook ()
+(defun company/python-mode-hook ()
   (add-to-list 'company-backends 'company-jedi))
 
-(add-hook 'python-mode-hook 'my/python-mode-hook)
+(add-hook 'python-mode-hook #'company/python-mode-hook)
 
 (setq company-idle-delay 0)
 
