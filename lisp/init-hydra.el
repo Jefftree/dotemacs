@@ -43,7 +43,7 @@
 ;; TODO: Establish naming convention
 (defun switch-to-projects nil
     (interactive)
-    (helm-find-files-1 (expand-file-name "~/self/")))
+    (helm-find-files-1 (expand-file-name "~/workspace/")))
 
 (defhydra my-helm-hydra (:hint nil :exit t :idle 0.5)
   "
@@ -110,27 +110,27 @@ Assumes that the frame is only split into two."
 
 (defun jefftree--open-todo nil
   (interactive)
-  (find-file "~/Sync/self/assay/todo.org")
+  (find-file "~/Sync/ro/assay/todo.org")
 )
 
 (defun jefftree--open-tickler nil
   (interactive)
-  (find-file "~/Sync/self/assay/tickler.org")
+  (find-file "~/Sync/ro/assay/tickler.org")
 )
 
 (defun jefftree--open-inbox nil
   (interactive)
-  (find-file "~/Sync/self/assay/inbox.org")
+  (find-file "~/Sync/ro/assay/inbox.org")
 )
 
 (defun jefftree--open-notes nil
   (interactive)
-  (find-file "~/Sync/self/assay/global.org")
+  (find-file "~/Sync/ro/notes/global.org")
 )
 
 (defun jefftree--open-backlog nil
   (interactive)
-  (find-file "~/Sync/self/assay/backlog.org")
+  (find-file "~/Sync/ro/assay/backlog.org")
 )
 
 (defun jefftree/config/open-init nil

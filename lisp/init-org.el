@@ -26,10 +26,10 @@
           (tags "LEVEL=3+TODO=\"TODO\""
                 ((org-agenda-overriding-header "High-priority unfinished tasks:"))
                 )
-          (tags "LEVEL=2+TODO=\"TODO\"" ((org-agenda-files '("~/Sync/self/assay/inbox.org"))
+          (tags "LEVEL=2+TODO=\"TODO\"" ((org-agenda-files '("~/Sync/ro/assay/inbox.org"))
                                         (org-agenda-overriding-header "Inbox")
                                          ))
-          (tags "LEVEL=3+TODO=\"NEXT\"" ((org-agenda-files '("~/Sync/self/assay/backlog.org"))
+          (tags "LEVEL=3+TODO=\"NEXT\"" ((org-agenda-files '("~/Sync/ro/assay/backlog.org"))
                                         (org-agenda-overriding-header "Backlog")
                                          ))
           (todo "BLOCKED"))) ;; review blocked items
@@ -71,19 +71,19 @@
               ("@phone" :foreground "SpringGreen1" :weight bold)
               )))
 
-(setq org-agenda-files '("~/Sync/self/assay/inbox.org"
-                         "~/Sync/self/assay/todo.org"
-                         "~/Sync/self/assay/tickler.org"))
+(setq org-agenda-files '("~/Sync/ro/assay/inbox.org"
+                         "~/Sync/ro/assay/todo.org"
+                         "~/Sync/ro/assay/tickler.org"))
 
-(setq org-refile-targets '(("~/Sync/self/assay/todo.org" :maxlevel . 2)
-                           ("~/Sync/self/assay/tickler.org" :maxlevel . 1)
-                           ("~/Sync/self/assay/backlog.org" :maxlevel . 1)))
+(setq org-refile-targets '(("~/Sync/ro/assay/todo.org" :maxlevel . 2)
+                           ("~/Sync/ro/assay/tickler.org" :maxlevel . 1)
+                           ("~/Sync/ro/assay/backlog.org" :maxlevel . 1)))
 
 (setq org-capture-templates '(("c" "Inbox" entry
-                               (file+headline "~/Sync/self/assay/inbox.org" "Tasks")
+                               (file+headline "~/Sync/ro/assay/inbox.org" "Tasks")
                                "* TODO %i%?")
                               ("t" "Tickler" entry
-                               (file+headline "~/Sync/self/assay/tickler.org" "Tickler")
+                               (file+headline "~/Sync/ro/assay/tickler.org" "Tickler")
                                "* %i%? \nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+1d\"))")))
 
 ;; Evaluating Python Code Blocks in org
