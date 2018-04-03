@@ -38,6 +38,7 @@
   ("o" dumb-jump-go-other-window)
   ("b" dumb-jump-back)
   ("c" avy-goto-char)
+  ("r" helm-jedi-related-names)
 )
 
 ;; TODO: Establish naming convention
