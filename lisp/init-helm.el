@@ -39,6 +39,9 @@
 (setq helm-display-header-line nil)
 ;; (after 'helm-mode (set-face-attribute 'helm-source-header nil :height 0.1))
 
+(setq helm-follow-mode-persistent 1)
+(setq helm-source-names-using-follow '("Search at ~/.emacs.d/"))
+
 (require-package 'projectile)
 
 (setq projectile-cache-file (concat dotemacs-cache-directory "projectile.cache"))
@@ -46,6 +49,7 @@
 
 (setq projectile-completion-system 'helm)
 
+(setq projectile-switch-project-action 'helm-projectile)
 (setq projectile-use-git-grep 1)
 (setq projectile-enable-caching t)
 (setq projectile-file-exists-remote-cache nil)
