@@ -49,19 +49,17 @@
 (defhydra my-helm-hydra (:hint nil :exit t :idle 0.5)
   "
    search:   _h_ → apropos   _y_ → kill-ring   _s_ → ag
-             _e_ → mini      _p_ → projectile  _f_ → pf
+             _e_ → mini      _v_ → resume      _f_ → pf
              _d_ → imenu     _o_ → switch      _l_ → files
-             _v_ → resume
 
   "
   ("h" helm-apropos)
   ("i" switch-to-projects)
   ("s" helm-projectile-ag)
   ("e" helm-mini)
-  ("f" helm-projectile-find-file)
+  ("f" helm-projectile)
   ("d" helm-imenu)
   ("l" helm-find-files)
-  ("p" helm-projectile)
   ("o" helm-projectile-switch-project)
   ("v" helm-resume)
   ("y" helm-show-kill-ring)
