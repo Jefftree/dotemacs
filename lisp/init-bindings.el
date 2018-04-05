@@ -127,6 +127,9 @@
 
 (after 'helm
   (global-set-key [remap execute-extended-command] #'helm-M-x)
+    (-define-keys helm-map
+        ("<tab>" 'helm-execute-persistent-action)
+        ("C-z" 'helm-select-action))
 )
 
 (add-hook 'eshell-mode-hook
