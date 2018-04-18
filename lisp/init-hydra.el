@@ -56,6 +56,7 @@
   ("h" helm-apropos)
   ("i" switch-to-projects)
   ("s" helm-projectile-ag)
+  ("g" helm-projectile-grep)
   ("e" helm-mini)
   ("f" helm-projectile)
   ("d" helm-imenu)
