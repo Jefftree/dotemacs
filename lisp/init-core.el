@@ -69,6 +69,9 @@
               :test #'equal))
 (add-ssh-agent-to-tramp)
 
+;; Mouse support
+(xterm-mouse-mode 1)
+
 ;; Disable tab indentation
 (setq-default indent-tabs-mode nil)
 
@@ -77,6 +80,10 @@
 
 ;; Sentences end with single space
 (setq sentence-end-double-space nil)
+
+;; Auto refresh file on change (usually vc pull on file)
+(global-auto-revert-mode t)
+
 
 ;; Remove trailing whitespace before save.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
