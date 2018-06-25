@@ -73,11 +73,11 @@
 )
 
 (-define-keys evil-motion-state-map
-  ("M-h" 'evil-window-left)
-  ("M-j" 'evil-window-down)
-  ("M-k" 'evil-window-up)
-  ("M-l" 'evil-window-right)
-  ("M-o" 'evil-window-rotate-downwards)
+  ("C-M-h" 'evil-window-left)
+  ("C-M-n" 'evil-window-down)
+  ("C-M-e" 'evil-window-up)
+  ("C-M-i" 'evil-window-right)
+  ("C-M-o" 'evil-window-rotate-downwards)
 )
 
 (-define-keys evil-normal-state-map
