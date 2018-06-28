@@ -373,6 +373,9 @@
        `(web-mode-block-control-face         ((,class (:foreground ,tree-red-1))))
        `(web-mode-variable-name-face         ((,class (:foreground ,tree-blue-2))))
 
+;;;;; Which Func
+       `(which-func                          ((,class (:foreground ,tree-blue-2))))
+
 ;;;;; More Whitespace
        `(whitespace-trailing                 ((,class (:background ,tree-red-4))))))
 
