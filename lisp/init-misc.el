@@ -5,7 +5,7 @@
 (setq js-indent-level 2) ; Javscript indentation: 2
 
 ;; iPython interpreter
-(setq python-shell-interpreter "ipython"
+(setq python-shell-interpreter "ipython2"
     python-shell-interpreter-args "--simple-prompt -i")
 
 ;; Highlight latex math
