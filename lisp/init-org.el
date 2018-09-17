@@ -14,7 +14,8 @@
 
 (setq org-agenda-span 7)
 (setq org-agenda-custom-commands
-      '(("n" "Actionable Items" todo "NEXT")
+      '(("n" "Actionable Items"
+         ((todo "NEXT")))
         ("W" "Weekly Review"
          ((agenda "" ((org-agenda-ndays 7))) ;; WIP
           (tags "+CLOSED>\"<-7d>\""
@@ -103,4 +104,10 @@
 
 (setq org-enforce-todo-dependencies t)
 (setq org-agenda-dim-blocked-tasks 'invisible)
+
+(require-package 'org-attach-screenshot)
+(require 'org-attach-screenshot)
+(setq org-attach-screenshot-command-line "screencapture -s %f")
+(setq org-attach-screenshot-auto-refresh nil)
+
 (provide 'init-org)
