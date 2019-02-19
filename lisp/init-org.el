@@ -110,4 +110,11 @@
 (setq org-attach-screenshot-command-line "screencapture -s %f")
 (setq org-attach-screenshot-auto-refresh nil)
 
+;; Highlight latex math
+(setq org-highlight-latex-and-related '(latex script entities))
+
+(require 'ox-latex)
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+(setq org-latex-listings 'minted)
+
 (provide 'init-org)

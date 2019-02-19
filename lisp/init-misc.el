@@ -8,9 +8,6 @@
 (setq python-shell-interpreter "ipython2"
     python-shell-interpreter-args "--simple-prompt -i")
 
-;; Highlight latex math
-(setq org-highlight-latex-and-related '(latex script entities))
-
 ;; lua tabs
 (setq lua-indent-level 2)
 
