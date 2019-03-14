@@ -1,5 +1,10 @@
 (setq org-ellipsis " …") ;; Shorter ellipses
 
+(require 'epa-file)
+(epa-file-enable)
+(setq epa-file-select-keys nil)
+(setq epa-pinentry-mode 'loopback)
+
 (setq org-todo-keywords
         '((sequence "TODO(t)" "BLOCKED(b)" "READY(r)" "NEXT(n)"
                     "|" "CANCELLED(c)" "DONE(x)")))
