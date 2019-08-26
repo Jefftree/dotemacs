@@ -11,6 +11,9 @@
 ;; lua tabs
 (setq lua-indent-level 2)
 
+(add-to-list 'auto-mode-alist '("\\.bazel\\'" . bazel-mode))
+(add-to-list 'auto-mode-alist '("\\BUILD\\'" . bazel-mode))
+
 (require-package 'neotree)
 (require 'neotree)
 
