@@ -19,6 +19,12 @@
 
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
+(require-package 'dired-subtree)
+(require 'dired-subtree)
+
+;; Directories before files in dired
+(setq dired-listing-switches "-lXGh --group-directories-first")
+
 (require-package 'restart-emacs)
 (require-package 'lua-mode)
 (require-package 'yaml-mode)

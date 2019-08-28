@@ -132,6 +132,9 @@
         ("C-z" 'helm-select-action))
 )
 
+(-define-keys dired-mode-map
+      ("<tab>" #'dired-subtree-toggle))
+
 (add-hook 'eshell-mode-hook
     (lambda ()
         (local-set-key (kbd "M-h") #'evil-window-left)
