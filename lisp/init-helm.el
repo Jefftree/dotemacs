@@ -39,6 +39,9 @@
 (setq helm-display-header-line nil)
 ;; (after 'helm-mode (set-face-attribute 'helm-source-header nil :height 0.1))
 
+;; Multiline annoyance
+(setq helm-projectile-truncate-lines t)
+
 (setq helm-follow-mode-persistent 1)
 (setq helm-source-names-using-follow '("Search at ~/.emacs.d/"))
 
