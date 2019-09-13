@@ -32,6 +32,8 @@
 
 (require-package 'dumb-jump)
 (setq dumb-jump-selector 'helm)
+(setq dumb-jump-prefer-searcher 'ag)
+(setq dumb-jump-max-find-time 6)
 
 (require-package 'avy)
 (require 'avy)

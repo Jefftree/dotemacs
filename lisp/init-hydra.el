@@ -28,7 +28,8 @@
 (defhydra my-jump-hydra (:hint nil :exit t :idle 0.5)
   "
    jump   _i_ → imenu   _k_ → swoop   _c_ → avy char
-          _l_ → multi swoop
+          _l_ → multi
+          _t_ → jump    _o_ → other   _p_ → quick look
 "
   ("i" helm-semantic-or-imenu)
   ("k" helm-swoop)
