@@ -50,7 +50,7 @@
 
 (spaceline-toggle-minor-modes-off) ; Saves diminish
 (spaceline-toggle-hud-off) ; Bar at very right
-(spaceline-toggle-major-mode-off)
+(spaceline-toggle-major-mode-on)
 (spaceline-toggle-buffer-encoding-abbrev-off) ; line ending
 (spaceline-toggle-version-control-off)
 (spaceline-toggle-buffer-position-off) ; Top Bot
