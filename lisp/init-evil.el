@@ -43,6 +43,5 @@
 
 (evil-set-initial-state 'eshell-mode 'emacs)
 (evil-set-initial-state 'inferior-python-mode 'emacs)
-(evil-set-initial-state 'neotree-mode 'emacs)
 
 (provide 'init-evil)
