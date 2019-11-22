@@ -17,8 +17,13 @@
 (require-package 'helm-fuzzier)
 (after 'helm-mode #'helm-fuzzier-mode)
 
+(after 'grep
+    (add-to-list 'grep-find-ignored-directories "vendor"))
+
 (require-package 'helm-ag)
 (setq helm-ag-fuzzy-match t)
+(setq helm-ag-use-grep-ignore-list t)
+
 
 (setq helm-M-x-fuzzy-match t)
 (setq helm-buffers-fuzzy-matching t)
