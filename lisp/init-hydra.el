@@ -25,11 +25,19 @@
 )
 
 
+
+(defun lsp-goto-first-ref nil
+  (interactive)
+  (lsp-ui-peek-find-references)
+  (lsp-ui-peek--select-next)
+  (lsp-ui-peek--goto-xref)
+)
+
 (defhydra my-jump-hydra (:hint nil :exit t :idle 0.5)
   "
    jump   _i_ → imenu   _k_ → swoop   _c_ → avy char
-          _t_ → def     _d_ → ref     _o_ → def-other-window
-          _l_ → multi
+          _t_ → def     _d_ → 1st-ref     _o_ → def-other-window
+          _l_ → multi   _s_ → ref
   "
   ("i" helm-semantic-or-imenu)
   ("k" helm-swoop)
@@ -37,7 +45,8 @@
   ("c" avy-goto-char)
   ("r" helm-jedi-related-names)
   ("t" lsp-ui-peek-find-definitions)
-  ("d" lsp-ui-peek-find-references)
+  ("d" lsp-goto-first-ref)
+  ("s" lsp-ui-peek-find-references)
   ("o" xref-find-definitions-other-window)
 )
 
