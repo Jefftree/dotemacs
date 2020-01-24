@@ -8,6 +8,7 @@
 
 (require-package 'lsp-mode)
 (add-hook 'go-mode-hook #'lsp-deferred)
+;; (add-hook 'emacs-lisp-mode-hook #'lsp-deferred)
 
 (require-package 'lsp-ui)
 (require 'lsp-ui)
@@ -16,7 +17,7 @@
 (setq lsp-ui-peek-list-width 60)
 (setq lsp-ui-peek-peek-height 40)
 
-;; iPython interpreter
+(setq lsp-clients-go-library-directories '("/usr/lib"))
 (setq python-shell-interpreter "ipython2"
     python-shell-interpreter-args "--simple-prompt -i")
 
