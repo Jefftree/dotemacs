@@ -9,9 +9,11 @@
            _p_ → push    _b_ → blame
   "
   ("s" magit-status)
-  ("b" magit-blame-popup)
+  ("b" magit-blame)
+
+  ;; Broken
   ("f" magit-file-popup)
-  ;("z" magit-stash-popup)
+  ("z" magit-stash-popup)
   ("l" magit-log-popup)
   ("d" magit-diff-popup)
   ("c" magit-commit-popup)
