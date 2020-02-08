@@ -50,4 +50,14 @@
 (require-package 'lua-mode)
 (require-package 'yaml-mode)
 
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
+(setq ediff-split-window-function #'split-window-horizontally)
+
+;; (defun dedicate-window-pls nil
+;;   (interactive)
+;;   (set-window-parameter (selected-window) 'no-other-window t))
+
+;; (add-hook 'ediff-mode-hook #'dedicate-window-pls)
+
 (provide 'init-misc)

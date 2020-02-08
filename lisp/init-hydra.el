@@ -1,5 +1,13 @@
 (require-package 'hydra)
 
+
+(defun jefftree-ediff nil
+  (interactive)
+  (require 'magit-ediff)
+  (apply 'magit-ediff-compare "master2" nil
+         (magit-ediff-read-files "master2" nil))
+  )
+
 (defhydra my-git-hydra (:hint nil :exit t :idle 0.5)
   "
    magit:  _s_ → status  _l_ → log    _f_ → file \
@@ -10,6 +18,7 @@
   "
   ("s" magit-status)
   ("b" magit-blame)
+  ("e" jefftree-ediff)
 
   ;; Broken
   ("f" magit-file-popup)

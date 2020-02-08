@@ -178,6 +178,8 @@
        `(ediff-odd-diff-A                    ((,class (:background ,tree-grey-2 :foreground ,tree-fg))))
        `(ediff-odd-diff-B                    ((,class (:background ,tree-grey-3 :foreground ,tree-fg))))
        `(ediff-odd-diff-C                    ((,class (:background ,tree-grey-5 :foreground ,tree-fg))))
+       `(ediff-fine-diff-B                    ((,class (:background ,tree-green-3 :foreground ,tree-fg))))
+
 
 ;;;;; flycheck
        `(flycheck-error                      ((((supports :underline (:style wave)))
