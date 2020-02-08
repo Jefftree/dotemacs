@@ -43,5 +43,8 @@
 
 (evil-set-initial-state 'eshell-mode 'emacs)
 (evil-set-initial-state 'inferior-python-mode 'emacs)
+(evil-set-initial-state 'magit-blame-mode 'emacs)
+(evil-set-initial-state 'treemacs-mode 'emacs)
+
 
 (provide 'init-evil)

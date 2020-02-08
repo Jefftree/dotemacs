@@ -31,8 +31,8 @@
 (setq helm-imenu-fuzzy-match t)
 
 ; Use other window for splits
-(setq helm-split-window-in-side-p nil)
-(setq helm-split-window-default-side 'other)
+(setq helm-split-window-inside-p nil)
+(setq helm-split-window-default-side 'right)
 
 (require-package 'helm-swoop)
 (setq helm-swoop-pre-input-function #'ignore)

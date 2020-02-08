@@ -93,6 +93,7 @@
   ("SPC s" 'my-jump-hydra/body)
   ("SPC g" 'my-git-hydra/body)
   ("SPC c" 'my-colemak-hydra/body)
+  ("SPC i" 'treemacs)
   ("SPC e" 'eshell)
   ("SPC n" 'my-notebook-hydra/body)
   ("SPC r" 'eval-buffer)
