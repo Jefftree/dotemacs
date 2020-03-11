@@ -52,7 +52,7 @@
 (spaceline-toggle-hud-off) ; Bar at very right
 (spaceline-toggle-major-mode-on)
 (spaceline-toggle-buffer-encoding-abbrev-off) ; line ending
-(spaceline-toggle-version-control-off)
+(spaceline-toggle-version-control-on)
 (spaceline-toggle-buffer-position-off) ; Top Bot
 
 (set-face-attribute 'spaceline-evil-emacs nil :background "#5fd7ff")

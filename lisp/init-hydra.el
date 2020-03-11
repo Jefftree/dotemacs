@@ -4,8 +4,8 @@
 (defun jefftree-ediff nil
   (interactive)
   (require 'magit-ediff)
-  (apply 'magit-ediff-compare "master2" nil
-         (magit-ediff-read-files "master2" nil))
+  (apply 'magit-ediff-compare "master" nil
+         (magit-ediff-read-files "master" nil))
   )
 
 (defhydra my-git-hydra (:hint nil :exit t :idle 0.5)
