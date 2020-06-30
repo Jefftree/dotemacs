@@ -57,7 +57,7 @@
   ("r" helm-jedi-related-names)
   ("t" lsp-ui-peek-find-definitions)
   ("d" lsp-goto-first-ref)
-  ("s" lsp-ui-peek-find-references)
+  ("s" lsp-goto-type-definition)
   ("o" xref-find-definitions-other-window)
 )
 
