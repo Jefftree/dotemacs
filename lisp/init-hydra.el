@@ -55,7 +55,7 @@
   ("l" helm-multi-swoop-all)
   ("c" avy-goto-char)
   ("r" helm-jedi-related-names)
-  ("t" lsp-ui-peek-find-definitions)
+  ("t" xref-find-definitions)
   ("d" lsp-goto-first-ref)
   ("s" lsp-goto-type-definition)
   ("o" xref-find-definitions-other-window)
