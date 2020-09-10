@@ -11,7 +11,6 @@
 
 ; Magical
 (setq gc-cons-threshold 777777)
-(package-initialize)
 
 (add-hook 'emacs-startup-hook 'toggle-frame-maximized)
 
