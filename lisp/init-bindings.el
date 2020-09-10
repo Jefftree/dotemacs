@@ -112,10 +112,6 @@
   ("j" 'evil-forward-word-end)
 )
 
-(-define-keys evil-normal-state-map
-  ("C-c ," 'avy-goto-word-2)
-  ("C-c ." 'avy-goto-char-2))
-
 (-define-keys evil-motion-state-map
   ("k" 'evil-search-next)
   ("K" 'evil-search-previous)
