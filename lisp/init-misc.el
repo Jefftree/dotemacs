@@ -8,6 +8,14 @@
 
 (require-package 'lsp-mode)
 (add-hook 'go-mode-hook #'lsp-deferred)
+(add-hook 'python-mode-hook #'lsp-deferred)
+
+;; (require-package 'lsp-jedi)
+;;   (with-eval-after-load "lsp-mode"
+;;     (add-to-list 'lsp-disabled-clients 'pyls)
+;;     (add-to-list 'lsp-enabled-clients 'jedi))
+
+
 ;; (add-hook 'emacs-lisp-mode-hook #'lsp-deferred)
 
 (require-package 'lsp-ui)
@@ -59,5 +67,8 @@
 ;;   (set-window-parameter (selected-window) 'no-other-window t))
 
 ;; (add-hook 'ediff-mode-hook #'dedicate-window-pls)
+
+;;use larger font
+;; (setq default-frame-alist '((font . "Consolas-20")))
 
 (provide 'init-misc)
