@@ -11,6 +11,9 @@
 (add-hook 'org-capture-mode-hook 'evil-insert-state) ; Org capture start in insert state
 
 
+(global-undo-tree-mode)
+(evil-set-undo-system 'undo-tree)
+
 (setq evil-emacs-state-cursor '("cyan" box))
 (setq evil-normal-state-cursor '("green" box))
 (setq evil-visual-state-cursor '("orange" box))
