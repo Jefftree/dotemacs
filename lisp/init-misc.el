@@ -4,7 +4,11 @@
 
 (setq js-indent-level 2) ; Javscript indentation: 2
 
+
+
 (require-package 'go-mode)
+
+(require-package 'gotest)
 
 (require-package 'lsp-mode)
 (add-hook 'go-mode-hook #'lsp-deferred)
@@ -27,6 +31,8 @@
 
 (setq lsp-clients-go-library-directories '("/usr/lib"))
 
+(setq lsp-enable-file-watchers nil)
+
 (require-package 'treemacs)
 
 (require-package 'treemacs-projectile)
@@ -35,9 +41,7 @@
 
 (require-package 'lsp-treemacs)
 
-(lsp-treemacs-sync-mode 1)
-
-
+;; (lsp-treemacs-sync-mode 1)
 
 (setq python-shell-interpreter "ipython2"
     python-shell-interpreter-args "--simple-prompt -i")
@@ -71,4 +75,11 @@
 ;;use larger font
 ;; (setq default-frame-alist '((font . "Consolas-20")))
 
+(require-package 'eglot)
+
+(require-package 'yafolding)
+(add-hook 'js-mode-hook #'hs-minor-mode)
+
+
+(setq hs-hide-all-non-comment-function #'ignore)
 (provide 'init-misc)
