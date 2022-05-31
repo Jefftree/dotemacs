@@ -1,6 +1,6 @@
 (require-package 'company)
 ;; (require-package 'company-jedi)
-(require-package 'company-tern)
+; (require-package 'company-tern)
 (require-package 'company-go)
 
 (require 'company)
@@ -8,16 +8,16 @@
 ;; (defun company/python-mode-hook ()
   ;; (add-to-list 'company-backends 'company-jedi))
 
-(defun company/js-mode-hook ()
-  (add-to-list 'company-backends 'company-tern)
-  (tern-mode))
+; (defun company/js-mode-hook ()
+;   (add-to-list 'company-backends 'company-tern)
+;   (tern-mode))
 
 (defun company/go-mode-hook ()
   (add-to-list 'company-backends 'company-go))
 
 
 ;; (add-hook 'python-mode-hook #'company/python-mode-hook)
-(add-hook 'js-mode-hook #'company/js-mode-hook)
+;; (add-hook 'js-mode-hook #'company/js-mode-hook)
 (add-hook 'go-mode-hook #'company/go-mode-hook)
 
 (require-package 'company-quickhelp)
