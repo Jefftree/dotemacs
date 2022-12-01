@@ -74,6 +74,7 @@
 
   "
   ("h" helm-apropos)
+  ("t" projectile-toggle-between-implementation-and-test)
   ("i" switch-to-projects)
   ("s" helm-projectile-ag)
   ("g" helm-projectile-grep)
@@ -85,6 +86,7 @@
   ("v" helm-resume)
   ("y" helm-show-kill-ring)
   ("m" helm-mark-ring)
+  ("w" helm-lsp-workspace-symbol)
 )
 
 
@@ -197,22 +199,18 @@ Assumes that the frame is only split into two."
   ("<" evil-window-decrease-width "<" :color red)
 )
 
+(defhydra my-notes-hydra (:hint nil :exit t :idle 0.5)
+  ("s" org-store-link "store")
+  ("t" org-insert-link "insert")
+)
+
 (defun connect-to-localhost nil
   (interactive)
   (ein:notebooklist-open "localhost:8888")
 )
 
-(defhydra my-notebook-hydra (:hint nil :exit t :idle 0.5)
-  ("c" connect-to-localhost "notebook-open")
-)
-
-(defhydra my-colemak-hydra (:hint nil :exit t :idle 0.5)
-  "
-                                                                            Q W F P G J L U Y ; [ ]
-                                                                             A R S T D H N E I O '
-                                                                              Z X C V B K M , . /
-  "
-)
-
+;; (defhydra my-notebook-hydra (:hint nil :exit t :idle 0.5)
+  ;; ("c" connect-to-localhost "notebook-open")
+;; )
 
 (provide 'init-hydra)
