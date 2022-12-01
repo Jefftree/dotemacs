@@ -10,27 +10,46 @@
   (after! undo-tree
     (global-undo-tree-mode -1)))
 
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
+
+(setq helm-ag-ignore-patterns '("swagger.json" "*zz_generated.*" "*.md" "*.json" "*generated.proto" "*generated.pb.go"))
 
 
 (require-package 'go-mode)
 
 (require-package 'gotest)
 
+(defun foo ()
+(define-key go-mode-map (kbd "C-x f") 'go-test-current-file)
+(define-key go-mode-map (kbd "C-x t") 'go-test-current-test))
+
 (require-package 'lsp-mode)
 (add-hook 'go-mode-hook #'lsp-deferred)
+(add-hook 'go-mode-hook #'foo)
 (add-hook 'python-mode-hook #'lsp-deferred)
+
+(require-package 'helm-lsp)
 
 (after 'lsp-mode (lsp-register-custom-settings
  '(("gopls.allowImplicitNetworkAccess" t t)
    )))
 
-(setq lsp-enable-file-watchers nil)
+(after 'lsp-mode
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]_output\\'")
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]testdata\\'")
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\.yaml\\'")
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\.json\\'")
+
+  (setq lsp-enable-file-watchers t)
+  (setq lsp-file-watch-threshold 10000)
+  )
 
 ;; Set up before-save hooks to format buffer and add/delete imports.
 ;; Make sure you don't have other gofmt/goimports hooks enabled.
 (defun lsp-go-install-save-hooks ()
   (add-hook 'before-save-hook #'lsp-format-buffer t t)
-  (add-hook 'before-save-hook #'lsp-organize-imports t t))
+  (add-hook 'before-save-hook #'lsp-organize-imports t t)
+  )
 (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
 
 ;; (add-hook 'emacs-lisp-mode-hook #'lsp-deferred)
@@ -39,8 +58,6 @@
 (require 'lsp-ui)
 
 (setq lsp-clients-go-library-directories '("/usr/lib"))
-
-(setq lsp-enable-file-watchers nil)
 
 (require-package 'treemacs)
 (require-package 'treemacs-projectile)

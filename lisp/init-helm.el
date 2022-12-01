@@ -63,6 +63,7 @@
 (setq projectile-file-exists-remote-cache nil)
 
 (setq projectile-globally-ignored-files '("TAGS" "*.o"))
+(setq projectile-project-search-path '("~/workspace/"))
 
 (add-hook 'after-init-hook #'projectile-mode)
 
