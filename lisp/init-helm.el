@@ -48,7 +48,7 @@
 (setq helm-projectile-truncate-lines t)
 
 (setq helm-follow-mode-persistent 1)
-(setq helm-source-names-using-follow '("Search at ~/.emacs.d/"))
+(setq helm-source-names-using-follow '("Search at ~/.emacs.d/" "Helm Xref"))
 
 (require-package 'projectile)
 

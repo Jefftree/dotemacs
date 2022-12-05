@@ -35,15 +35,6 @@
   ("R" git-gutter:unstage-whole-buffer)
 )
 
-
-
-(defun lsp-goto-first-ref nil
-  (interactive)
-  (lsp-ui-peek-find-references)
-  (lsp-ui-peek--select-next)
-  (lsp-ui-peek--goto-xref)
-)
-
 (defhydra my-jump-hydra (:hint nil :exit t :idle 0.5)
   "
    jump   _i_ → imenu   _k_ → swoop   _c_ → avy char
@@ -56,7 +47,7 @@
   ("c" avy-goto-char)
   ("r" helm-jedi-related-names)
   ("t" xref-find-definitions)
-  ("d" lsp-goto-first-ref)
+  ("d" lsp-find-references)
   ("s" lsp-goto-type-definition)
   ("o" xref-find-definitions-other-window)
 )

@@ -44,20 +44,46 @@
   (setq lsp-file-watch-threshold 10000)
   )
 
+(require-package 'dap-mode)
+(require 'dap-dlv-go)
+(after 'dap-mode
+  (setq dap-auto-configure-features
+   '(sessions locals breakpoints expressions tooltip))
+    )
+
+(after 'dap-ui
+  (setq dap-ui-buffer-configurations
+        `((,dap-ui--locals-buffer . ((side . right) (slot . 1) (window-width . 0.20)))
+          (,dap-ui--expressions-buffer . ((side . right) (slot . 2) (window-width . 0.20)))
+          (,dap-ui--sessions-buffer . ((side . right) (slot . 3) (window-width . 0.20)))
+          (,dap-ui--breakpoints-buffer . ((side . left) (slot . 2) (window-width . ,treemacs-width)))
+          (,dap-ui--debug-window-buffer . ((side . bottom) (slot . 3) (window-width . 0.20)))
+          (,dap-ui--repl-buffer . ((side . right) (slot . 2) (window-width . 0.45))))))
+
+(add-to-list 'display-buffer-alist '(".+server log\\*\\'" display-buffer-no-window))
+(add-to-list 'display-buffer-alist '("\\*eshell" display-buffer-in-side-window
+      (side . bottom)
+      (slot . -1)
+      (window-parameters . ((no-other-window . t)))))
+
+(require-package 'iedit)
+
 ;; Set up before-save hooks to format buffer and add/delete imports.
 ;; Make sure you don't have other gofmt/goimports hooks enabled.
 (defun lsp-go-install-save-hooks ()
   (add-hook 'before-save-hook #'lsp-format-buffer t t)
-  (add-hook 'before-save-hook #'lsp-organize-imports t t)
+  ;; (add-hook 'before-save-hook #'lsp-organize-imports t t)
   )
 (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
 
 ;; (add-hook 'emacs-lisp-mode-hook #'lsp-deferred)
-
 (require-package 'lsp-ui)
 (require 'lsp-ui)
+;; (setq lsp-ui-sideline-show-hover t)
 
-(setq lsp-clients-go-library-directories '("/usr/lib"))
+(setq lsp-clients-go-library-directories '("/usr/local/go"))
+
+(require-package 'helm-xref)
 
 (require-package 'treemacs)
 (require-package 'treemacs-projectile)

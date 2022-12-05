@@ -149,6 +149,7 @@
        `(helm-ff-file                        ((,class (:foreground ,tree-fg))))
        `(helm-ff-directory                   ((,class (:foreground ,tree-blue-2))))
        `(helm-ff-executable                  ((,class (:foreground ,tree-green-5))))
+       `(helm-xref-file-name                  ((,class (:foreground ,tree-yellow-3))))
 
 ;;;;; Highlight
        `(highlight                           ((,class (:background ,tree-grey-3))))

@@ -88,7 +88,7 @@
   ("SPC o" 'my-org-hydra/body)
   ("SPC v" 'pwd)
   ("SPC b" 'my-buffer-hydra/body)
-  ("SPC d" 'dired-jump-other-window)
+  ("SPC d" 'dap-hydra)
   ("SPC t" 'my-toggle-hydra/body)
   ("SPC s" 'my-jump-hydra/body)
   ("SPC g" 'my-git-hydra/body)
