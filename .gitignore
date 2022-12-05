@@ -2,6 +2,7 @@ elpa
 auto-save-list
 eshell
 custom.el
+.undo
 .python-environments/
 .cache
 notes.org

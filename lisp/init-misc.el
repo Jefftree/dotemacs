@@ -10,7 +10,7 @@
   (after! undo-tree
     (global-undo-tree-mode -1)))
 
-(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/.undo")))
 
 (setq helm-ag-ignore-patterns '("swagger.json" "*zz_generated.*" "*.md" "*.json" "*generated.proto" "*generated.pb.go"))
 
