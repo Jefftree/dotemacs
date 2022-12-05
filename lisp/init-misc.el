@@ -36,6 +36,7 @@
 
 (after 'lsp-mode
   (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]_output\\'")
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]vendor\\'")
   (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]testdata\\'")
   (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\.yaml\\'")
   (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\.json\\'")
