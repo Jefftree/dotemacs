@@ -10,3 +10,4 @@ request/
 ac-comphist.dat
 transient/
 session.*
+.dap-breakpoints
