@@ -58,26 +58,20 @@
     (helm-find-files-1 (expand-file-name "~/workspace/")))
 
 (defhydra my-helm-hydra (:hint nil :exit t :idle 0.5)
-  "
-   search:   _h_ → apropos   _y_ → kill-ring   _s_ → ag    _m_ → mark-ring
-             _e_ → mini      _v_ → resume      _f_ → pf
-             _d_ → imenu     _o_ → switch      _l_ → files
-
-  "
-  ("h" helm-apropos)
-  ("t" projectile-toggle-between-implementation-and-test)
-  ("i" switch-to-projects)
-  ("s" helm-projectile-ag)
-  ("g" helm-projectile-grep)
-  ("e" helm-mini)
-  ("f" helm-projectile)
-  ("d" helm-imenu)
-  ("l" helm-find-files)
-  ("o" helm-projectile-switch-project)
-  ("v" helm-resume)
-  ("y" helm-show-kill-ring)
-  ("m" helm-mark-ring)
-  ("w" helm-lsp-workspace-symbol)
+  ("h" helm-apropos "apropos")
+  ("t" projectile-toggle-between-implementation-and-test "toggle test")
+  ("i" switch-to-projects "project")
+  ("s" helm-projectile-ag "ag")
+  ("g" helm-projectile-grep "grep")
+  ("e" helm-mini "mini")
+  ("f" helm-projectile "projectile")
+  ("d" helm-imenu "imenu")
+  ("l" helm-find-files "ff")
+  ("o" helm-projectile-switch-project "switch-project")
+  ("v" helm-resume "resume")
+  ("y" helm-show-kill-ring "kill ring")
+  ("m" helm-mark-ring "mark ring")
+  ("w" helm-lsp-workspace-symbol "symbol")
 )
 
 
