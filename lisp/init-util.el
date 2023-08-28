@@ -38,9 +38,6 @@
 (require-package 'avy)
 (require 'avy)
 
-(require-package 'ein)
-(require 'ein)
-
 ; (require-package 'autopair)
 ; (require 'autopair)
 ; (autopair-global-mode)

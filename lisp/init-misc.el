@@ -101,9 +101,6 @@
 ;; lua tabs
 (setq lua-indent-level 2)
 
-(add-to-list 'auto-mode-alist '("\\.bazel\\'" . bazel-mode))
-(add-to-list 'auto-mode-alist '("\\BUILD\\'" . bazel-mode))
-
 (require-package 'dired-subtree)
 (require 'dired-subtree)
 
@@ -127,9 +124,6 @@
 ;;use larger font
 ;; (setq default-frame-alist '((font . "Consolas-20")))
 
-(require-package 'eglot)
-
-(require-package 'yafolding)
 (add-hook 'js-mode-hook #'hs-minor-mode)
 
 

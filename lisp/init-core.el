@@ -84,7 +84,6 @@
 ;; Auto refresh file on change (usually vc pull on file)
 (global-auto-revert-mode t)
 
-
 ;; Remove trailing whitespace before save.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
