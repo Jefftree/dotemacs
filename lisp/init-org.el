@@ -1,10 +1,5 @@
 (setq org-ellipsis " …") ;; Shorter ellipses
 
-(require 'epa-file)
-(epa-file-enable)
-(setq epa-file-select-keys nil)
-(setq epa-pinentry-mode 'loopback)
-
 (setq org-todo-keywords
         '((sequence "TODO(t)" "BLOCKED(b)" "READY(r)" "NEXT(n)"
                     "|" "CANCELLED(c)" "DONE(x)")))
@@ -91,13 +86,6 @@
                               ("t" "Tickler" entry
                                (file+headline "~/Sync/ro/assay/tickler.org" "Tickler")
                                "* %i%? \nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+1d\"))")))
-
-;; Evaluating Python Code Blocks in org
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((python . t)
-   (C . t)
-   ))
 
 (setq org-tag-alist '(("@work" . ?w)
                       ("@home" . ?h)

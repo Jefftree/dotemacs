@@ -97,7 +97,7 @@
   ("SPC r" 'eval-buffer)
   ("SPC k" 'helm-colors)
   ("SPC SPC" 'helm-M-x)
-  ("SPC Q" (lambda () (interactive) (restart-emacs '("--debug-init"))))
+  ("SPC Q" (lambda () (interactive) (restart-emacs)))
 )
 
 ;; Rules are meant to be broken
