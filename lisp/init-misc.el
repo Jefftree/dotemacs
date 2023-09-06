@@ -87,14 +87,6 @@
 
 (require-package 'helm-xref)
 
-(require-package 'treemacs)
-(require-package 'treemacs-projectile)
-
-(setq treemacs-is-never-other-window t)
-(require-package 'lsp-treemacs)
-
-(lsp-treemacs-sync-mode 1)
-
 (setq python-shell-interpreter "ipython2"
     python-shell-interpreter-args "--simple-prompt -i")
 

@@ -92,7 +92,6 @@
   ("SPC t" 'my-toggle-hydra/body)
   ("SPC s" 'my-jump-hydra/body)
   ("SPC g" 'my-git-hydra/body)
-  ("SPC i" 'treemacs)
   ("SPC e" 'eshell)
   ("SPC n" 'my-notes-hydra/body)
   ("SPC r" 'eval-buffer)

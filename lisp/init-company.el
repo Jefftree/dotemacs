@@ -1,18 +1,5 @@
 (require-package 'company)
-;; (require-package 'company-jedi)
-; (require-package 'company-tern)
-
 (require 'company)
-
-;; (defun company/python-mode-hook ()
-  ;; (add-to-list 'company-backends 'company-jedi))
-
-; (defun company/js-mode-hook ()
-;   (add-to-list 'company-backends 'company-tern)
-;   (tern-mode))
-
-;; (add-hook 'python-mode-hook #'company/python-mode-hook)
-;; (add-hook 'js-mode-hook #'company/js-mode-hook)
 
 (require-package 'company-quickhelp)
 

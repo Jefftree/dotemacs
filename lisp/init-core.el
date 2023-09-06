@@ -57,18 +57,6 @@
 (setq recentf-auto-cleanup 300)
 (add-hook 'after-init-hook #'recentf-mode)
 
-(require 'tramp)
-(setq tramp-default-method "rsync")
-(setq tramp-completion-reread-directory-timeout nil)
-(setq tramp-persistency-file-name (concat dotemacs-cache-directory "tramp"))
-
-(defun add-ssh-agent-to-tramp ()
-  (cl-pushnew '("-A")
-              (cadr (assoc 'tramp-login-args
-                           (assoc "ssh" tramp-methods)))
-              :test #'equal))
-(add-ssh-agent-to-tramp)
-
 ;; Mouse support
 (xterm-mouse-mode 1)
 

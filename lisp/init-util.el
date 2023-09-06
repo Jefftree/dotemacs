@@ -30,16 +30,4 @@
 ; Save window configs (C-c <left>)
 (add-hook 'after-init-hook #'winner-mode)
 
-(require-package 'dumb-jump)
-(setq dumb-jump-selector 'helm)
-(setq dumb-jump-prefer-searcher 'ag)
-(setq dumb-jump-max-find-time 6)
-
-(require-package 'avy)
-(require 'avy)
-
-; (require-package 'autopair)
-; (require 'autopair)
-; (autopair-global-mode)
-
 (provide 'init-util)
